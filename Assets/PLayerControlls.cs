@@ -53,6 +53,24 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""UltimateAttack"",
+                    ""type"": ""Button"",
+                    ""id"": ""0327e6f9-23de-4e0d-ae15-793fa34ef0b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""a03309ee-b4a2-4f47-b22e-b7f9b529c698"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
                     ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bcccbaa5-61f6-45fa-8385-d2bb14d6cb79"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UltimateAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b3cde75-8589-44f7-acd5-2b46be606d7a"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         m_Character_Attack = m_Character.FindAction("Attack", throwIfNotFound: true);
         m_Character_Movement = m_Character.FindAction("Movement", throwIfNotFound: true);
         m_Character_Aim = m_Character.FindAction("Aim", throwIfNotFound: true);
+        m_Character_UltimateAttack = m_Character.FindAction("UltimateAttack", throwIfNotFound: true);
+        m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +249,8 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Attack;
     private readonly InputAction m_Character_Movement;
     private readonly InputAction m_Character_Aim;
+    private readonly InputAction m_Character_UltimateAttack;
+    private readonly InputAction m_Character_Dash;
     public struct CharacterActions
     {
         private @PLayerControlls m_Wrapper;
@@ -214,6 +258,8 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         public InputAction @Attack => m_Wrapper.m_Character_Attack;
         public InputAction @Movement => m_Wrapper.m_Character_Movement;
         public InputAction @Aim => m_Wrapper.m_Character_Aim;
+        public InputAction @UltimateAttack => m_Wrapper.m_Character_UltimateAttack;
+        public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -232,6 +278,12 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
             @Aim.started += instance.OnAim;
             @Aim.performed += instance.OnAim;
             @Aim.canceled += instance.OnAim;
+            @UltimateAttack.started += instance.OnUltimateAttack;
+            @UltimateAttack.performed += instance.OnUltimateAttack;
+            @UltimateAttack.canceled += instance.OnUltimateAttack;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -245,6 +297,12 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
             @Aim.started -= instance.OnAim;
             @Aim.performed -= instance.OnAim;
             @Aim.canceled -= instance.OnAim;
+            @UltimateAttack.started -= instance.OnUltimateAttack;
+            @UltimateAttack.performed -= instance.OnUltimateAttack;
+            @UltimateAttack.canceled -= instance.OnUltimateAttack;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -267,5 +325,7 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnUltimateAttack(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }

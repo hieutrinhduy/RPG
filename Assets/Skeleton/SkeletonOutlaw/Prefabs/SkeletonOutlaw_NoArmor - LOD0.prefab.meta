@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 46ed63af97cc2db47b121fc1b2cc6bf0
+timeCreated: 1554210796
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 130946
+  packageName: Skeleton Outlaw
+  packageVersion: 1.4
+  assetPath: Assets/Kevin Iglesias/SkeletonOutlaw/Prefabs/SkeletonOutlaw_NoArmor
+    - LOD0.prefab
+  uploadId: 359804

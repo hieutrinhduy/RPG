@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c1fd12dda6e62a44826afa6d8c44698
+timeCreated: 1545343731
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 130946
+  packageName: Skeleton Outlaw
+  packageVersion: 1.4
+  assetPath: Assets/Kevin Iglesias/SkeletonOutlaw/Materials/SkeletonOutlawSkybox.mat
+  uploadId: 359804
