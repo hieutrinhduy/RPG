@@ -64,6 +64,7 @@
     <Compile Include="Assets\PlayerHpBar.cs" />
     <Compile Include="Assets\PlayerLevel.cs" />
     <Compile Include="Assets\Health.cs" />
+    <Compile Include="Assets\MenuController.cs" />
     <Compile Include="Assets\AIEnemy.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\Demo_Manager.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\Slash_Manager.cs" />
@@ -84,6 +85,7 @@
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB_Dissolve.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\RPG Monster Wave PBR\Shaders\PBRMaskTint.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Slash.shader" />
@@ -102,6 +104,7 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\__www.unityassetcollection.com__.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
@@ -111,6 +114,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\RPGMonsterWave02PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\RPG Monster Wave PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Add_DissolveEmissive.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

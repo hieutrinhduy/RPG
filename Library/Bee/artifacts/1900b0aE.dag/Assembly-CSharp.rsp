@@ -384,6 +384,7 @@
 "Assets/EnemyHpBar.cs"
 "Assets/ExpBlock.cs"
 "Assets/Health.cs"
+"Assets/MenuController.cs"
 "Assets/Mini Simple Characters Skeleton Demo/Readme/Scripts/Readme.cs"
 "Assets/PLayerControlls.cs"
 "Assets/PlayerHpBar.cs"
