@@ -14,7 +14,7 @@ public class MenuController : MonoBehaviour
     {
         startButton.onClick.AddListener(delegate
         {
-            SceneManager.LoadScene("Stage1.1",LoadSceneMode.Single);
+            SceneManager.LoadScene("CutScene",LoadSceneMode.Single);
         });
     }
 

@@ -73,8 +73,10 @@
     <Compile Include="Assets\UnlimitedBladeWorks.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\MagicAttacks_Manager.cs" />
+    <Compile Include="Assets\SceneChanger.cs" />
     <Compile Include="Assets\ExpBlock.cs" />
     <Compile Include="Assets\Sword.cs" />
+    <Compile Include="Assets\Dialog.cs" />
     <Compile Include="Assets\EnemyHpBar.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\MagicAttacks_Projectile.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
@@ -85,6 +87,7 @@
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB_Dissolve.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Fantastic Dungeon Pack\scenes\README.txt" />
     <None Include="Assets\RPG Monster Wave PBR\Shaders\PBRMaskTint.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -95,6 +98,7 @@
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Vefects_Distortion_01.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Add_DoubleSided.shader" />
     <None Include="Assets\RPGMonsterWave02PBR\Shaders\PBRMaskTint.shader" />
+    <None Include="Assets\___www.unityassetcollection.com___.txt" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Add_Trail.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB_DissolveTex.shader" />
@@ -112,6 +116,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Fantastic Dungeon Pack\shaders\S_doublesided_lit_nonormal.shader" />
     <None Include="Assets\RPGMonsterWave02PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\RPG Monster Wave PBR\SRP\HowToTestSRPs.txt" />
