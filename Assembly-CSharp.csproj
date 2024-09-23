@@ -61,24 +61,42 @@
     <Analyzer Include="D:\car\Car1-main\2023.2.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerHpBar.cs" />
-    <Compile Include="Assets\PlayerLevel.cs" />
-    <Compile Include="Assets\Health.cs" />
-    <Compile Include="Assets\MenuController.cs" />
-    <Compile Include="Assets\AIEnemy.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMoveDestroy.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DelayActive.cs" />
+    <Compile Include="Assets\Scripts\levelChange.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousTranslateMove.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousRotateObject.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\NewMaterialChange.cs" />
+    <Compile Include="Assets\Scripts\UnlimitedBladeWorks.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\Demo_Manager.cs" />
+    <Compile Include="Assets\Scripts\ExpBlock.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\Slash_Manager.cs" />
-    <Compile Include="Assets\PLayerControlls.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
-    <Compile Include="Assets\UnlimitedBladeWorks.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ChangeSizeColor.cs" />
+    <Compile Include="Assets\KnockBack.cs" />
+    <Compile Include="Assets\Scripts\PlayerLevel.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ScaleFactorApplyToMaterial.cs" />
+    <Compile Include="Assets\Portal Particle\Scrpt\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\MagicAttacks_Manager.cs" />
-    <Compile Include="Assets\SceneChanger.cs" />
-    <Compile Include="Assets\ExpBlock.cs" />
-    <Compile Include="Assets\Sword.cs" />
-    <Compile Include="Assets\Dialog.cs" />
-    <Compile Include="Assets\EnemyHpBar.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousMouseOrbit.cs" />
+    <Compile Include="Assets\Scripts\Sword.cs" />
+    <Compile Include="Assets\Scripts\Dialog.cs" />
+    <Compile Include="Assets\Scripts\SceneChanger.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ShieldActivate.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\MultipleObjectsMake.cs" />
+    <Compile Include="Assets\Scripts\PlayerHpBar.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\_ObjectsMakeBase.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousEffectsScene.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DestroyObject.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />
+    <Compile Include="Assets\Scripts\PLayerControlls.cs" />
+    <Compile Include="Assets\Scripts\EnemyHpBar.cs" />
+    <Compile Include="Assets\Scripts\AIEnemy.cs" />
     <Compile Include="Assets\Vefects\Stylized VFX\Skills\_Scripts_\MagicAttacks_Projectile.cs" />
+    <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMove.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +104,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB_Dissolve.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_Decal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Fantastic Dungeon Pack\scenes\README.txt" />
     <None Include="Assets\RPG Monster Wave PBR\Shaders\PBRMaskTint.shader" />
@@ -96,6 +115,7 @@
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_AB_Trail.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Vefects_Distortion_01.shader" />
+    <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_DistortionEffect.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Add_DoubleSided.shader" />
     <None Include="Assets\RPGMonsterWave02PBR\Shaders\PBRMaskTint.shader" />
     <None Include="Assets\___www.unityassetcollection.com___.txt" />
@@ -119,6 +139,7 @@
     <None Include="Assets\Fantastic Dungeon Pack\shaders\S_doublesided_lit_nonormal.shader" />
     <None Include="Assets\RPGMonsterWave02PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_IntegratedEffect.shader" />
     <None Include="Assets\RPG Monster Wave PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Vefects\Stylized VFX\Shared\Shaders\SH_VFX_Veffects_Add_DissolveEmissive.shader" />
