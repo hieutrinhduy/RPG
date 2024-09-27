@@ -17,6 +17,11 @@ public class AIEnemy : MonoBehaviour
     [SerializeField] private float detectionRadius = 10f; // Detection radius around the enemy
     [SerializeField] private float attackDelay = 10f;
 
+    [Header("Multi Attack Skills")]
+    [SerializeField] private bool hasMultipleAttack;
+    [SerializeField] private int numberAttackSkill;
+    [SerializeField] private float[] attackSkillDelay;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -26,11 +31,10 @@ public class AIEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (isDead || target == null) 
+        if (isDead || target == null)
         {
-            
             return;
-        } 
+        }
 
         timeSinceLastAttack += Time.deltaTime;
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
@@ -50,20 +54,55 @@ public class AIEnemy : MonoBehaviour
         }
         else if (!isAttacking)
         {
-            StopMovement();
+            //StopMovement();
         }
     }
 
     private IEnumerator StartAttack()
     {
+        // Kiểm tra khoảng cách trước khi bắt đầu tấn công
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if (distanceToTarget > detectionRadius)
+        {
+            // Nếu target đã ra khỏi tầm đánh, quay lại đuổi theo
+            isAttacking = false;
+            agent.isStopped = false;
+            agent.SetDestination(target.position);
+            animator.SetBool("Moving", true);
+            yield break; // Kết thúc tấn công
+        }
+
+        // Bắt đầu tấn công
         isAttacking = true;
         agent.isStopped = true;
         animator.SetBool("Moving", false); // Ensure movement is stopped when attacking
         animator.SetBool("IsAttacking", true);
-        animator.SetTrigger("Attack");
-        yield return new WaitForSeconds(attackDelay);
+
+        if (hasMultipleAttack)
+        {
+            int n = Random.Range(0, numberAttackSkill);
+            string attackTrigger = n == 0 ? "Attack" : "Attack" + n;
+            animator.SetTrigger(attackTrigger);
+            yield return new WaitForSeconds(attackSkillDelay[n]);
+        }
+        else
+        {
+            animator.SetTrigger("Attack");
+            yield return new WaitForSeconds(attackDelay);
+        }
+
         EnableWeaponColliders();
         timeSinceLastAttack = 0f;
+
+        // Kiểm tra khoảng cách sau lần tấn công đầu tiên
+        distanceToTarget = Vector3.Distance(transform.position, target.position);
+        if (distanceToTarget > detectionRadius)
+        {
+            EndAttack();
+            yield break; // Nếu target ra khỏi tầm đánh, dừng tấn công
+        }
+
+        // Kết thúc đợt tấn công
         Invoke(nameof(EndAttack), attackCooldown);
     }
 
@@ -72,7 +111,20 @@ public class AIEnemy : MonoBehaviour
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
         DisableWeaponColliders();
+
+        // Kiểm tra khoảng cách sau khi kết thúc tấn công
+        float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+        // Nếu target đã ra khỏi tầm đánh, enemy tiếp tục đuổi theo
+        if (distanceToTarget > detectionRadius)
+        {
+            agent.isStopped = false;
+            agent.SetDestination(target.position);
+            animator.SetBool("Moving", true);
+        }
     }
+
+
 
     private void EnableWeaponColliders()
     {

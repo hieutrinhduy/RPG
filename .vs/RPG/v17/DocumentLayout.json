@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "D:\\RPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\scripts\\playercontrolls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrolls.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\scripts\\aienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\aienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\aienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\knockback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\knockback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\knockback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -31,32 +35,43 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AQIAALQAAAAAAAAAAAAiwNQAAAAAAAAA",
+              "Title": "PLayerControlls.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\PLayerControlls.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PLayerControlls.cs",
+              "ToolTip": "D:\\RPG\\Assets\\Scripts\\PLayerControlls.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PLayerControlls.cs",
+              "ViewState": "AQIAACgBAAAAAAAAAAAAwDMBAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T13:57:16.505Z",
+              "WhenOpened": "2024-09-27T03:02:20.049Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T13:57:16.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AIEnemy.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\AIEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AIEnemy.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\AIEnemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\AIEnemy.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEQAAAAAAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAYwEoAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T13:48:10.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T13:48:10.209Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Sword.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sword.cs",
@@ -64,12 +79,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Sword.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T12:54:17.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T12:54:17.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "KnockBack.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\KnockBack.cs",
               "RelativeDocumentMoniker": "Assets\\KnockBack.cs",
@@ -77,8 +91,7 @@
               "RelativeToolTip": "Assets\\KnockBack.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAowDsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T12:48:44.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T12:48:44.323Z"
             }
           ]
         }
