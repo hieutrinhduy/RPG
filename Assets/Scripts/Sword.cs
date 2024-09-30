@@ -8,6 +8,7 @@ public class Sword : MonoBehaviour
     [SerializeField] private int damageAmount;
     [SerializeField] private int knockbackThurst;
     private Collider collider;
+    public bool dontHaveTurnOffCollider;
 
     private void Start()
     {
@@ -42,7 +43,10 @@ public class Sword : MonoBehaviour
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damageAmount);
-            collider.enabled = false;
+            if (!dontHaveTurnOffCollider)
+            {
+                collider.enabled = false;
+            }
         }
         if (enemyKnockBack != null && knockbackThurst != null)
         {

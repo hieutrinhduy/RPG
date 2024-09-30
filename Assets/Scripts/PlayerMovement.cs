@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -67,6 +68,15 @@ public class PlayerMovement : MonoBehaviour
         ApplyMovement();
         ApplyMouseRotation();
         AnimatorControllers();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            health.currentHealth += health.startingHealth / 4;
+            if(health.currentHealth > health.startingHealth)
+            {
+                health.currentHealth = health.startingHealth;
+            }
+        }
     }
     private void CheckIsDead()
     {

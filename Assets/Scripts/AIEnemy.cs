@@ -15,7 +15,7 @@ public class AIEnemy : MonoBehaviour
     [SerializeField] private Image HpBar;
     public bool isDead;
     [SerializeField] private float detectionRadius = 10f; // Detection radius around the enemy
-    [SerializeField] private float attackDelay = 10f;
+    [SerializeField] private float attackDelay = 1f;
 
     [Header("Multi Attack Skills")]
     [SerializeField] private bool hasMultipleAttack;
@@ -39,43 +39,42 @@ public class AIEnemy : MonoBehaviour
         timeSinceLastAttack += Time.deltaTime;
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
+        // Kiểm tra xem target có nằm trong vùng detection hay không
         if (distanceToTarget <= detectionRadius && !isAttacking)
         {
-            agent.isStopped = false;
-            agent.SetDestination(target.position);
-
-            bool isMoving = agent.velocity.magnitude > 0.1f;
-            animator.SetBool("Moving", isMoving);
-
-            if (agent.remainingDistance <= agent.stoppingDistance && timeSinceLastAttack >= attackCooldown)
+            // Đuổi theo mục tiêu nếu ngoài vùng tấn công
+            if (distanceToTarget > agent.stoppingDistance)
+            {
+                agent.isStopped = false;
+                agent.SetDestination(target.position);
+                animator.SetBool("Moving", agent.velocity.magnitude > 0.1f);
+            }
+            // Bắt đầu tấn công nếu target trong vùng tấn công
+            else if (timeSinceLastAttack >= attackCooldown)
             {
                 StartCoroutine(StartAttack());
             }
         }
         else if (!isAttacking)
         {
-            //StopMovement();
+            StopMovement();
         }
     }
 
     private IEnumerator StartAttack()
     {
-        // Kiểm tra khoảng cách trước khi bắt đầu tấn công
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (distanceToTarget > detectionRadius)
+
+        // Nếu target ra khỏi vùng tấn công trước khi bắt đầu tấn công
+        if (distanceToTarget > agent.stoppingDistance)
         {
-            // Nếu target đã ra khỏi tầm đánh, quay lại đuổi theo
             isAttacking = false;
-            agent.isStopped = false;
-            agent.SetDestination(target.position);
-            animator.SetBool("Moving", true);
-            yield break; // Kết thúc tấn công
+            yield break;
         }
 
         // Bắt đầu tấn công
         isAttacking = true;
-        agent.isStopped = true;
-        animator.SetBool("Moving", false); // Ensure movement is stopped when attacking
+        StopMovement();
         animator.SetBool("IsAttacking", true);
 
         if (hasMultipleAttack)
@@ -96,13 +95,13 @@ public class AIEnemy : MonoBehaviour
 
         // Kiểm tra khoảng cách sau lần tấn công đầu tiên
         distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (distanceToTarget > detectionRadius)
+        if (distanceToTarget > agent.stoppingDistance)
         {
             EndAttack();
             yield break; // Nếu target ra khỏi tầm đánh, dừng tấn công
         }
 
-        // Kết thúc đợt tấn công
+        // Kết thúc tấn công sau một khoảng thời gian
         Invoke(nameof(EndAttack), attackCooldown);
     }
 
@@ -112,19 +111,15 @@ public class AIEnemy : MonoBehaviour
         animator.SetBool("IsAttacking", false);
         DisableWeaponColliders();
 
-        // Kiểm tra khoảng cách sau khi kết thúc tấn công
+        // Tiếp tục đuổi theo mục tiêu nếu còn trong vùng detection
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
-
-        // Nếu target đã ra khỏi tầm đánh, enemy tiếp tục đuổi theo
-        if (distanceToTarget > detectionRadius)
+        if (distanceToTarget <= detectionRadius)
         {
             agent.isStopped = false;
             agent.SetDestination(target.position);
             animator.SetBool("Moving", true);
         }
     }
-
-
 
     private void EnableWeaponColliders()
     {
