@@ -91870,6 +91870,7 @@ MonoBehaviour:
   parentObject: {fileID: 8189980434698872579}
   damageAmount: 1
   knockbackThurst: 0
+  dontHaveTurnOffCollider: 0
 --- !u!198 &6518797828494131586
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -97288,6 +97289,7 @@ MonoBehaviour:
   parentObject: {fileID: 8189980434698872579}
   damageAmount: 3
   knockbackThurst: 0
+  dontHaveTurnOffCollider: 0
 --- !u!135 &7465266327195995819
 SphereCollider:
   m_ObjectHideFlags: 0

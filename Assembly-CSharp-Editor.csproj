@@ -61,6 +61,7 @@
     <Analyzer Include="D:\car\Car1-main\2023.2.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PyroParticles\Prefab\Editor\PyroParticlesEditor.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Editor\ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
