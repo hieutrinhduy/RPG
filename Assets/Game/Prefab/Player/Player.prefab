@@ -29783,6 +29783,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 7744783984637970035}
   damageAmount: 3
+  knockbackThurst: 0
+  dontHaveTurnOffCollider: 0
 --- !u!1 &1488657895813831781
 GameObject:
   m_ObjectHideFlags: 0
@@ -71340,6 +71342,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentObject: {fileID: 7744783984637970035}
   damageAmount: 1
+  knockbackThurst: 0
+  dontHaveTurnOffCollider: 0
 --- !u!1 &7415717544673316890
 GameObject:
   m_ObjectHideFlags: 0

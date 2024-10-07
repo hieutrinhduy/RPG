@@ -1,0 +1,467 @@
+Using pre-set license
+Built from '2023.2/staging' branch; Version is '2023.2.20f1 (0e25a174756c) revision 927137'; Using compiler version '193431935'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 15724 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\car\Car1-main\2023.2.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+D:/RPG
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+62629
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: D:/RPG
+D:/RPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [13164] Host "[IP] 10.20.244.226 [Port] 0 [Flags] 2 [Guid] 3614261164 [EditorId] 3614261164 [Version] 1048832 [Id] WindowsEditor(7,Admin-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [13164] Host "[IP] 10.20.244.226 [Port] 0 [Flags] 2 [Guid] 3614261164 [EditorId] 3614261164 [Version] 1048832 [Id] WindowsEditor(7,Admin-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.20f1 (0e25a174756c)
+[Subsystems] Discovering subsystems at path D:/car/Car1-main/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/RPG/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f9d)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   30.0.15.1274
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Initialize mono
+Mono path[0] = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/Managed'
+Mono path[1] = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/car/Car1-main/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/car/Car1-main/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.003348 seconds.
+- Loaded All Assemblies, in  0.526 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 249 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.697 seconds
+Domain Reload Profiling: 1223ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (55ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (209ms)
+		LoadAssemblies (191ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (204ms)
+			TypeCache.Refresh (203ms)
+				TypeCache.ScanAssembly (185ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (698ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (636ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (371ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (192ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.842 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.740 seconds
+Domain Reload Profiling: 1582ms
+	BeginReloadAssembly (442ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (37ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (305ms)
+		LoadAssemblies (320ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (122ms)
+			TypeCache.Refresh (102ms)
+				TypeCache.ScanAssembly (88ms)
+			BuildScriptInfoCaches (14ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (741ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (512ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (26ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (28ms)
+			ProcessInitializeOnLoadAttributes (425ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 46 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2070 unused Assets / (0.8 MB). Loaded Objects now: 2699.
+Memory consumption went from 190.4 MB to 189.7 MB.
+Total: 6.221900 ms (FindLiveObjects: 0.253700 ms CreateObjectMapping: 0.266000 ms MarkObjects: 5.051600 ms  DeleteObjects: 0.649600 ms)
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.532 seconds
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.685 seconds
+Domain Reload Profiling: 1218ms
+	BeginReloadAssembly (219ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (36ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (244ms)
+		LoadAssemblies (304ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (84ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (74ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (685ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (465ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (19ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (24ms)
+			ProcessInitializeOnLoadAttributes (396ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2068 unused Assets / (0.6 MB). Loaded Objects now: 2699.
+Memory consumption went from 181.0 MB to 180.4 MB.
+Total: 8.684500 ms (FindLiveObjects: 0.306000 ms CreateObjectMapping: 0.360700 ms MarkObjects: 7.051800 ms  DeleteObjects: 0.964800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 6690.148816 seconds.
+  path: Assets/Portal Particle/Mesh/Cylinder_2.FBX
+  artifactKey: Guid(a646e6dc7d252544ca5c5429cb47d3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Portal Particle/Mesh/Cylinder_2.FBX using Guid(a646e6dc7d252544ca5c5429cb47d3c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a10aaf09d5e3541219c8a45fa90f93d') in 0.1656454 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Fantastic Dungeon Pack/materials/M_FX_glow_dungeon.mat
+  artifactKey: Guid(1024e84002168c44aaed81be58fbfd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/materials/M_FX_glow_dungeon.mat using Guid(1024e84002168c44aaed81be58fbfd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6ae13afd8b1fa2093e6ed6b5993570f0') in 0.0359151 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_Flare_AB.mat
+  artifactKey: Guid(a054ea09f404f054daed280adea86c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_Flare_AB.mat using Guid(a054ea09f404f054daed280adea86c4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '52dfb4f190e11a7b2c482eaa6995b2b3') in 0.1222599 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Dark/Materials/M_VFX_DarkMagic_Smoke.mat
+  artifactKey: Guid(d741cdbf5c0f17840b8d57a1a968fc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Dark/Materials/M_VFX_DarkMagic_Smoke.mat using Guid(d741cdbf5c0f17840b8d57a1a968fc35) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a9117a7eff76e25c35629ad39f17e51') in 0.0959037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.580626 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_RockProjectile.mat
+  artifactKey: Guid(3ba0cb55b3d659e48ab4ffcc1a231a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_RockProjectile.mat using Guid(3ba0cb55b3d659e48ab4ffcc1a231a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '99c9424fe4bec736d4500d9348adfb51') in 0.2157961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_RocksBlurred.mat
+  artifactKey: Guid(a2d522923173a3a408f7b12ffb871aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Earth/Materials/M_VFX_EarthMagic_RocksBlurred.mat using Guid(a2d522923173a3a408f7b12ffb871aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9c6d9e2c3d97439b20a5bbb8f678189a') in 0.0217959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_FireSmoke.mat
+  artifactKey: Guid(6fa92caf38444ba48b3bc3d506289b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_FireSmoke.mat using Guid(6fa92caf38444ba48b3bc3d506289b37) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '76aa61682306f5a1d6950d596f7bd62d') in 0.0152867 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Flare_01.mat
+  artifactKey: Guid(969ca55108ac53241b394c9b5b3c7715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Flare_01.mat using Guid(969ca55108ac53241b394c9b5b3c7715) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '30ee61b5d2107b255449442674249e2b') in 0.0122582 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Lightning.mat
+  artifactKey: Guid(4adf0cedd87cd294e9ce036ed18089d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Lightning.mat using Guid(4adf0cedd87cd294e9ce036ed18089d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b027ca9e2e60c0fdc73879684464082b') in 0.0200002 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Flare_02.mat
+  artifactKey: Guid(59622abbc04349f43b9d6e86a73c1052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Flare_02.mat using Guid(59622abbc04349f43b9d6e86a73c1052) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '700ed53f885a08f2bc381bf3f39f71fe') in 0.0134161 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_Emblem.mat
+  artifactKey: Guid(7fbf0a071401b7d468a6335d34f84e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_Emblem.mat using Guid(7fbf0a071401b7d468a6335d34f84e38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06b70c78a281e62b1f3374af4c7b70b7') in 0.006969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Pentacle.mat
+  artifactKey: Guid(b70d89cd9717c494eb4dfc8a793a0421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Pentacle.mat using Guid(b70d89cd9717c494eb4dfc8a793a0421) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '491570cf69d00765754953539502d2fd') in 0.0208827 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Projectile.mat
+  artifactKey: Guid(e63833d706a97b748bbb29216fbd3dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Electric/Materials/M_VFX_ElectricMagic_Projectile.mat using Guid(e63833d706a97b748bbb29216fbd3dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b607660209bfbc7c861e42b872ca473') in 0.0934984 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.044061 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_FlareRing.mat
+  artifactKey: Guid(f30641e723a8c1e4596371b1f13c1174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Fire/Materials/M_VFX_FireMagic_FlareRing.mat using Guid(f30641e723a8c1e4596371b1f13c1174) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f70f3dda332bf69a9913ceb1443ef357') in 0.0129148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Skill/Stylized VFX/Shared/Materials/M_VFX_Flare_01.mat
+  artifactKey: Guid(a5989aa1127dd154eb930d29868eb438) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Shared/Materials/M_VFX_Flare_01.mat using Guid(a5989aa1127dd154eb930d29868eb438) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b495adec1558358c53801b3dce6793c') in 0.0173424 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013092 seconds.
+  path: Assets/Skill/Stylized VFX/Shared/Materials/M_VFX_Flare_03_AB.mat
+  artifactKey: Guid(0acaee18b5392ab4687059c231cc4180) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Shared/Materials/M_VFX_Flare_03_AB.mat using Guid(0acaee18b5392ab4687059c231cc4180) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8a5da9c8193ef2bdb249318ef635c3bc') in 0.0169909 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002353 seconds.
+  path: Assets/Skill/Stylized VFX/Skills/MagicAttacks/Ice/Materials/M_VFX_IceMagic_Flare_01.mat
+  artifactKey: Guid(4ca986e6154ccfe4da4f69a6a7283c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skill/Stylized VFX/Skills/MagicAttacks/Ice/Materials/M_VFX_IceMagic_Flare_01.mat using Guid(4ca986e6154ccfe4da4f69a6a7283c2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1f6725af5cf3696a4c1e32e02ee3784f') in 0.0107829 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.538 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.713 seconds
+Domain Reload Profiling: 1253ms
+	BeginReloadAssembly (216ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (50ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (239ms)
+		LoadAssemblies (302ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (72ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (62ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (714ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (488ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (28ms)
+			ProcessInitializeOnLoadAttributes (399ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2068 unused Assets / (0.6 MB). Loaded Objects now: 2744.
+Memory consumption went from 184.1 MB to 183.5 MB.
+Total: 6.706600 ms (FindLiveObjects: 0.261500 ms CreateObjectMapping: 0.301000 ms MarkObjects: 5.521000 ms  DeleteObjects: 0.622200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.543 seconds
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.681 seconds
+Domain Reload Profiling: 1225ms
+	BeginReloadAssembly (222ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (247ms)
+		LoadAssemblies (312ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (76ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (66ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (682ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (458ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (22ms)
+			ProcessInitializeOnLoadAttributes (391ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2068 unused Assets / (511.5 KB). Loaded Objects now: 2744.
+Memory consumption went from 186.0 MB to 185.5 MB.
+Total: 6.943400 ms (FindLiveObjects: 0.245600 ms CreateObjectMapping: 0.218800 ms MarkObjects: 5.885800 ms  DeleteObjects: 0.592300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
