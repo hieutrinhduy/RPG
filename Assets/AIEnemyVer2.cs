@@ -14,6 +14,7 @@ public class AIEnemyVer2 : MonoBehaviour
     [SerializeField] private Collider[] weaponColliders;
     [SerializeField] private Image HpBar;
     public bool isDead;
+    public bool isStunning;
     [SerializeField] private float detectionRadius = 10f; // Detection radius around the enemy
     [SerializeField] private float attackDelay = 1f;
 
@@ -27,12 +28,19 @@ public class AIEnemyVer2 : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isDead = false;
+        isStunning = false;
     }
 
     private void Update()
     {
         if (isDead || target == null)
         {
+            return;
+        }
+
+        if(isStunning)
+        {
+            agent.isStopped = true;
             return;
         }
 
@@ -67,8 +75,62 @@ public class AIEnemyVer2 : MonoBehaviour
         }
     }
 
+    private float stunDuration = 0f;
+    private float stunEndTime = 0f;
+
+    public void StartStun(float time)
+    {
+        // Nếu đang bị stun, cộng dồn thời gian
+        if (isStunning)
+        {
+            stunDuration += time;
+            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc mới
+        }
+        else
+        {
+            stunDuration = time; // Thiết lập thời gian stun
+            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc
+            StartCoroutine(StunRoutine());
+        }
+    }
+
+    private IEnumerator StunRoutine()
+    {
+        isStunning = true;
+        agent.isStopped = true; // Dừng NavMeshAgent khi bị stun
+        agent.velocity = Vector3.zero; // Đảm bảo NavMeshAgent không di chuyển
+        animator.SetBool("Stun", true);
+        animator.SetBool("Moving", false);
+
+        // Chờ đến khi thời gian stun kết thúc
+        yield return new WaitUntil(() => Time.time >= stunEndTime);
+
+        isStunning = false;
+        agent.isStopped = false; // Cho phép NavMeshAgent hoạt động lại sau khi stun kết thúc
+        animator.SetBool("Stun", false);
+    }
+
+
+    private IEnumerator StunRoutine(float stunTime)
+    {
+        isStunning = true;
+        agent.isStopped = true; // Dừng NavMeshAgent khi bị stun
+        agent.velocity = Vector3.zero; // Đảm bảo NavMeshAgent không di chuyển
+        animator.SetBool("Stun", true);
+        animator.SetBool("Moving", false);
+
+        yield return new WaitForSeconds(stunTime);
+
+        isStunning = false;
+        agent.isStopped = false; // Cho phép NavMeshAgent hoạt động lại sau khi stun kết thúc
+        animator.SetBool("Stun", false);
+    }
+
+
     private IEnumerator StartAttack()
     {
+        if (isStunning) yield break; // Nếu đang bị stun thì không tấn công
+
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
         // Nếu target ra khỏi vùng tấn công trước khi bắt đầu tấn công
@@ -111,11 +173,11 @@ public class AIEnemyVer2 : MonoBehaviour
         Invoke(nameof(EndAttack), attackCooldown);
     }
 
+
     private void EndAttack()
     {
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
-
         // Tiếp tục đuổi theo mục tiêu nếu còn trong vùng detection
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
         if (distanceToTarget <= detectionRadius)
@@ -150,7 +212,7 @@ public class AIEnemyVer2 : MonoBehaviour
 
     private void RotateTowardsTarget()
     {
-        if (target == null) return;
+        if (target == null || isStunning) return; 
 
         Vector3 direction = (target.position - transform.position).normalized;
         direction.y = 0; // Giữ nguyên độ cao
@@ -159,6 +221,7 @@ public class AIEnemyVer2 : MonoBehaviour
         // Quay từ từ về phía mục tiêu
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
+
 
     private void OnDrawGizmosSelected()
     {

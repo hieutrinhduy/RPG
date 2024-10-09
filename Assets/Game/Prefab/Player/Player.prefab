@@ -76537,7 +76537,6 @@ GameObject:
   - component: {fileID: 3422532772038115955}
   - component: {fileID: 1026678731151092215}
   - component: {fileID: 1811805130082037479}
-  - component: {fileID: 7636242618801882349}
   - component: {fileID: 4026423986977446213}
   - component: {fileID: 2354577690611453691}
   m_Layer: 8
@@ -76620,32 +76619,11 @@ MonoBehaviour:
   normalAttackFx: {fileID: 8937295870677055611}
   ultimateAttackFx: {fileID: 612867564037874411}
   dashFX: {fileID: 710775737286869567}
---- !u!143 &7636242618801882349
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7744783984637970035}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+  groundCheck: {fileID: 0}
+  groundDistance: 0.4
+  groundMask:
     serializedVersion: 2
     m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1.5
-  m_Radius: 0.33
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.71, z: 0}
 --- !u!114 &4026423986977446213
 MonoBehaviour:
   m_ObjectHideFlags: 0

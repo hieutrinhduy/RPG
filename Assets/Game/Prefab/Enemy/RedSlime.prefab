@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 680179187342603924}
   - component: {fileID: 8492389416093557741}
   - component: {fileID: 7109784351362138661}
+  - component: {fileID: 2265525782347565926}
   m_Layer: 0
   m_Name: RedSlime
   m_TagString: Enemy
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1351dca393ca3d54b84b5dac7db0bfc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 10
+  startingHealth: 3
   currentHealth: 0
   HpBar: {fileID: 0}
   defaultMaterial: {fileID: 2100000, guid: d9c0226bd4324f01bc178cf4a515ef84, type: 2}
@@ -178,6 +179,9 @@ MonoBehaviour:
   isDead: 0
   detectionRadius: 10
   attackDelay: 0.3
+  hasMultipleAttack: 0
+  numberAttackSkill: 0
+  attackSkillDelay: []
 --- !u!114 &7109784351362138661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +194,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5572a6b0c4ccf54ca228fc553915231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2265525782347565926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189939004507380803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a8060426f4a894188f4e25a4fce30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expForce: 10000
+  radius: 8.25
+  explodeEffect: {fileID: 100006, guid: 93485fd5fc2ccf2439cb3239186f6382, type: 3}
 --- !u!1 &498445125949354823
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498445125949354823}
   serializedVersion: 2
-  m_LocalRotation: {x: -5.551115e-17, y: -4.3368087e-19, z: -0.2246773, w: 0.97443324}
+  m_LocalRotation: {x: -5.551115e-17, y: -4.3368066e-19, z: -0.2246773, w: 0.97443324}
   m_LocalPosition: {x: -0.22764134, y: -5.7731595e-17, z: 7.533981e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -310,7 +329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2865271004694222136}
   serializedVersion: 2
-  m_LocalRotation: {x: -5.3776428e-17, y: 1.6653345e-16, z: -0.15302908, w: 0.9882217}
+  m_LocalRotation: {x: -5.3776424e-17, y: 1.6653347e-16, z: -0.15302908, w: 0.9882217}
   m_LocalPosition: {x: -0.2780328, y: -1.7763568e-17, z: 1.2912811e-16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -343,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3333104582896532643}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.4837256, y: 0.8752197, z: 8.989413e-17, w: -2.8923308e-16}
+  m_LocalRotation: {x: 0.4837256, y: 0.8752197, z: -2.3972098e-17, w: -8.3211405e-17}
   m_LocalPosition: {x: 0.05909794, y: -0.1357536, z: -8.4168956e-17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -549,6 +568,7 @@ MonoBehaviour:
   parentObject: {fileID: 189939004507380803}
   damageAmount: 1
   knockbackThurst: 0
+  dontHaveTurnOffCollider: 0
 --- !u!1 &8727223922427790300
 GameObject:
   m_ObjectHideFlags: 0

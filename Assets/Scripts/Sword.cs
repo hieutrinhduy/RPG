@@ -9,7 +9,8 @@ public class Sword : MonoBehaviour
     [SerializeField] private int knockbackThurst;
     private Collider collider;
     public bool dontHaveTurnOffCollider;
-
+    public bool canStun;
+    [SerializeField] private float stunTime;
     private void Start()
     {
         collider = GetComponent<Collider>();
@@ -40,12 +41,21 @@ public class Sword : MonoBehaviour
 
         Health enemyHealth = other.gameObject.GetComponent<Health>();
         KnockBack enemyKnockBack = other.gameObject.GetComponent<KnockBack>();
+        AIEnemyVer2 enemyVer2 = other.gameObject.GetComponent<AIEnemyVer2>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damageAmount);
             if (!dontHaveTurnOffCollider)
             {
                 collider.enabled = false;
+            }
+        }
+        if (canStun)
+        {
+            if(enemyVer2 != null)
+            {
+                enemyVer2.StartStun(stunTime);
+                return;
             }
         }
         if (enemyKnockBack != null && knockbackThurst != null)

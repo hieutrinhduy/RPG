@@ -9,11 +9,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float moveSpeed;
 
     private Rigidbody rb;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody>();
-        if(player != null)
+
+        if (player != null)
         {
             fireDir = player.transform.position - gameObject.transform.position;
             rb.velocity = new Vector3(fireDir.x, fireDir.y, fireDir.z).normalized * moveSpeed;
@@ -22,14 +24,14 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        // Automatically destroy the bullet after 3 seconds
+        Destroy(gameObject, 8f);
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Destroy(gameObject);
-    //}
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Ground")) return;
         Destroy(gameObject);
     }
 }

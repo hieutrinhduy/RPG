@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PyroParticles\Prefab\Editor\PyroParticlesEditor.cs" />
+    <Compile Include="Assets\WarFx\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Editor\ReadmeEditor.cs" />
+    <Compile Include="Assets\WarFx\WarFX\Editor\CFX_SpawnSystemEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

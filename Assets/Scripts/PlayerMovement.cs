@@ -1,149 +1,176 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     private PLayerControlls controls;
-    private CharacterController characterController;
+    private Rigidbody rb;
     private Animator animator;
 
     [Header("Movement Info")]
-    [SerializeField] private float WalkSpeed;
-    public Vector3 movementDirection;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashDuration = 0.5f;
+    [SerializeField] private float dashCooldown = 2f;
 
-    private float verticalVelocity;
     private Vector2 moveInput;
-    private Vector2 aimInput;
+    private Vector3 movementDirection;
 
-    [Header("Aim Info")]
-    [SerializeField] private LayerMask aimLayerMask;
-    private Vector3 lookingDirection;
-
-    [Header("Attack")]
-    [SerializeField] private float attackCountDown;
+    [Header("Attack Info")]
+    [SerializeField] private float attackCountDown = 0.5f;
     private float lastTimeAttack;
     [SerializeField] private Collider swordCollider;
     [SerializeField] private Collider ultimateSwordCollider;
-
-    [SerializeField] private float ultimateAttackCountDown;
+    [SerializeField] private float ultimateAttackCountDown = 2f;
     private float lastTimeUltimateAttack;
 
-    [Header("Dash")]
-    [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashTime;
-    private Vector3 dashDirection;
-    [SerializeField] private float dashCountDown; // Time between dashes
     private float lastTimeDash;
 
     [Header("FX")]
     [SerializeField] private ParticleSystem normalAttackFx;
     [SerializeField] private ParticleSystem ultimateAttackFx;
     [SerializeField] private ParticleSystem dashFX;
-    private Health health;
+
+    [Header("Ground Check")]
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
+    private bool isGrounded;
+
     private void Awake()
     {
         controls = new PLayerControlls();
-        controls.Character.Attack.performed += context => NormalAttack();
-        controls.Character.UltimateAttack.performed += context => UltimateAttack();
         controls.Character.Movement.performed += context => moveInput = context.ReadValue<Vector2>();
         controls.Character.Movement.canceled += context => moveInput = Vector2.zero;
-        controls.Character.Aim.performed += context => aimInput = context.ReadValue<Vector2>();
-        controls.Character.Aim.canceled += context => aimInput = Vector2.zero;
+        controls.Character.Attack.performed += context => NormalAttack();
+        controls.Character.UltimateAttack.performed += context => UltimateAttack();
         controls.Character.Dash.performed += context => Dash();
+        controls.Character.Shoot.performed += context => Fire();
+        controls.Character.FAttack.performed += context => Poke();
     }
 
     private void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        health = GetComponent<Health>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if(health.IsDead) return;
+        CheckGrounded();
         ApplyMovement();
         ApplyMouseRotation();
-        AnimatorControllers();
-
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            health.currentHealth += health.startingHealth / 4;
-            if(health.currentHealth > health.startingHealth)
-            {
-                health.currentHealth = health.startingHealth;
-            }
-        }
+        UpdateAnimator();
     }
-    private void CheckIsDead()
+
+    private void CheckGrounded()
     {
-
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
+
     private void ApplyMouseRotation()
     {
-        // Lấy vị trí của chuột trên màn hình (Screen Space)
         Vector3 mouseScreenPosition = Input.mousePosition;
-
-        // Tạo mặt phẳng trên trục XZ (nơi nhân vật di chuyển)
         Plane groundPlane = new Plane(Vector3.up, transform.position);
-
-        // Tạo tia từ camera đi qua vị trí của chuột
         Ray rayFromCamera = Camera.main.ScreenPointToRay(mouseScreenPosition);
 
-        // Kiểm tra xem tia có cắt qua mặt phẳng không
         if (groundPlane.Raycast(rayFromCamera, out float enter))
         {
-            // Tính vị trí mà tia cắt mặt phẳng
             Vector3 hitPoint = rayFromCamera.GetPoint(enter);
-
-            // Tính hướng từ vị trí nhân vật đến vị trí cắt trên mặt phẳng
-            Vector3 directionToLook = hitPoint - transform.position;
-
-            // Đảm bảo hướng nhìn chỉ nằm trên mặt phẳng XZ (loại bỏ trục Y)
+            Vector3 directionToLook = (hitPoint - transform.position).normalized;
             directionToLook.y = 0f;
-
-            // Chuẩn hóa hướng nhìn
-            directionToLook.Normalize();
-
-            // Xoay nhân vật về hướng của chuột
             transform.forward = directionToLook;
         }
     }
 
-
-
-    private void AnimatorControllers()
-    {
-        float xVelocity = Vector3.Dot(movementDirection.normalized, transform.right);
-        float zVelocity = Vector3.Dot(movementDirection.normalized, transform.forward);
-        animator.SetFloat("xVelocity", xVelocity, .05f, Time.deltaTime);
-        animator.SetFloat("zVelocity", zVelocity, .05f, Time.deltaTime);
-    }
-
     private void ApplyMovement()
     {
-        movementDirection = new Vector3(moveInput.x, 0, moveInput.y);
-        ApplyGravity();
-        if (movementDirection.magnitude > 0)
+        movementDirection = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+
+        if (isGrounded)
         {
-            characterController.Move(movementDirection * Time.deltaTime * WalkSpeed);
+            Vector3 move = new Vector3(moveInput.x, 0, moveInput.y).normalized;
+
+            // Sử dụng MovePosition thay vì điều chỉnh velocity trực tiếp
+            rb.MovePosition(rb.position + move * walkSpeed * Time.fixedDeltaTime);
         }
     }
 
-    private void ApplyGravity()
+
+
+    private void UpdateAnimator()
     {
-        if (!characterController.isGrounded)
+        float xVelocity = moveInput.x;
+        float zVelocity = moveInput.y;
+        animator.SetFloat("xVelocity", xVelocity, 0.1f, Time.deltaTime);
+        animator.SetFloat("zVelocity", zVelocity, 0.1f, Time.deltaTime);
+    }
+
+    private void NormalAttack()
+    {
+        if (Time.time > lastTimeAttack)
         {
-            verticalVelocity -= 9.81f * Time.deltaTime;
-            movementDirection.y = verticalVelocity;
+            animator.SetTrigger("Attack");
+            lastTimeAttack = Time.time + attackCountDown;
+            StartCoroutine(SwordColliderRoutine(0.5f));
+            normalAttackFx.Play(); // Chơi hiệu ứng tấn công thường
         }
-        else
+    }
+
+    private void UltimateAttack()
+    {
+        if (Time.time > lastTimeUltimateAttack)
         {
-            verticalVelocity = -.5f;
+            animator.SetTrigger("Ultimate");
+            lastTimeUltimateAttack = Time.time + ultimateAttackCountDown;
+            StartCoroutine(UltimateSwordColliderRoutine(2f));
+            ultimateAttackFx.Play(); // Chơi hiệu ứng tấn công đặc biệt
         }
+    }
+
+    private void Dash()
+    {
+        if (Time.time >= lastTimeDash)
+        {
+            lastTimeDash = Time.time + dashCooldown;
+            StartCoroutine(DashRoutine());
+        }
+    }
+
+    private void Fire()
+    {
+        animator.SetTrigger("Shoot");
+    }
+    private void Poke()
+    {
+        animator.SetTrigger("Poke");
+    }
+
+    private IEnumerator DashRoutine()
+    {
+        Vector3 dashDirection = transform.forward;
+        //rb.velocity = dashDirection * dashSpeed;
+        rb.AddForce(dashDirection* dashSpeed , ForceMode.VelocityChange);
+        dashFX.Play(); // Chơi hiệu ứng dash
+        yield return new WaitForSeconds(dashDuration);
+
+        // Đặt lại vận tốc sau khi dash
+        rb.velocity = Vector3.zero;
+    }
+
+    private IEnumerator SwordColliderRoutine(float time)
+    {
+        swordCollider.enabled = true;
+        yield return new WaitForSeconds(time);
+        swordCollider.enabled = false;
+    }
+
+    private IEnumerator UltimateSwordColliderRoutine(float time)
+    {
+        ultimateSwordCollider.enabled = true;
+        yield return new WaitForSeconds(time);
+        ultimateSwordCollider.enabled = false;
     }
 
     private void OnEnable()
@@ -155,70 +182,4 @@ public class PlayerMovement : MonoBehaviour
     {
         controls.Disable();
     }
-
-    private void NormalAttack()
-    {
-        if (Time.time > lastTimeAttack)
-        {
-            animator.SetTrigger("Attack");
-            lastTimeAttack = Time.time + attackCountDown;
-            StartCoroutine(SwordColliderRoutine(0.5f));
-            normalAttackFx.Play();
-        }
-    }
-
-    private void UltimateAttack()
-    {
-        if (Time.time > lastTimeUltimateAttack)
-        {
-            ultimateAttackFx.Play();
-            animator.SetTrigger("Ultimate");
-            lastTimeUltimateAttack = Time.time + ultimateAttackCountDown;
-            StartCoroutine(UltimateSwordColliderRoutine(2f));
-        }
-    }
-
-    IEnumerator SwordColliderRoutine(float time)
-    {
-        swordCollider.enabled = true;
-        yield return new WaitForSeconds(time);
-        swordCollider.enabled = false;
-    }
-    IEnumerator UltimateSwordColliderRoutine(float time)
-    {
-        ultimateSwordCollider.enabled = true;
-        yield return new WaitForSeconds(time);
-        ultimateSwordCollider.enabled = false;
-    }
-    private void Dash()
-    {
-        if (Time.time > lastTimeDash)
-        {
-            Debug.Log("Dash");
-            lastTimeDash = Time.time + dashCountDown; // Set the next allowed dash time
-            StartCoroutine(DashRoutine());
-        }
-        else
-        {
-            Debug.Log("Dash on cooldown!");
-        }
-    }
-
-    IEnumerator DashRoutine()
-    {
-        characterController.detectCollisions = false;
-        float startTime = Time.time;
-
-        // Sử dụng hướng của nhân vật để dash
-        dashDirection = transform.forward;
-
-        dashFX.Play();
-        while (Time.time < startTime + dashTime)
-        {
-            characterController.Move(dashDirection * dashSpeed * Time.deltaTime);
-            yield return null;
-        }
-        characterController.detectCollisions = true;
-    }
-
 }
