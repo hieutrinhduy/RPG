@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\RPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\aienemyver2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\fade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\fade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\aienemyver2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\aienemyver2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\playerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\playerprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\particlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\particlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\playerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\shoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +39,8 @@
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\bomb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\playerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\turtle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,24 +58,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ParticleController.cs",
-              "DocumentMoniker": "D:\\RPG\\Assets\\ParticleController.cs",
-              "RelativeDocumentMoniker": "Assets\\ParticleController.cs",
-              "ToolTip": "D:\\RPG\\Assets\\ParticleController.cs",
-              "RelativeToolTip": "Assets\\ParticleController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAyAAAA",
+              "DocumentIndex": 0,
+              "Title": "Fade.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\Fade.cs",
+              "RelativeDocumentMoniker": "Assets\\Fade.cs",
+              "ToolTip": "D:\\RPG\\Assets\\Fade.cs",
+              "RelativeToolTip": "Assets\\Fade.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T15:19:29.917Z",
+              "WhenOpened": "2024-10-10T15:25:14.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerProjectile.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\PlayerProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerProjectile.cs",
+              "ToolTip": "D:\\RPG\\Assets\\PlayerProjectile.cs",
+              "RelativeToolTip": "Assets\\PlayerProjectile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T13:22:49.239Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Bullet.cs",
+              "ToolTip": "D:\\RPG\\Assets\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Bullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T08:06:51.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Bomb.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Bomb.cs",
@@ -95,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Shoot.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Shoot.cs",
               "RelativeDocumentMoniker": "Assets\\Shoot.cs",
@@ -107,19 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Bullet.cs",
-              "DocumentMoniker": "D:\\RPG\\Assets\\Bullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Bullet.cs",
-              "ToolTip": "D:\\RPG\\Assets\\Bullet.cs",
-              "RelativeToolTip": "Assets\\Bullet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T08:06:51.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Health.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
@@ -131,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Turtle.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Turtle.cs",
               "RelativeDocumentMoniker": "Assets\\Turtle.cs",
@@ -143,45 +159,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "AIEnemyVer2.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\AIEnemyVer2.cs",
               "RelativeDocumentMoniker": "Assets\\AIEnemyVer2.cs",
               "ToolTip": "D:\\RPG\\Assets\\AIEnemyVer2.cs",
               "RelativeToolTip": "Assets\\AIEnemyVer2.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAAwGgAAAAuAAAA",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAUwKYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T13:03:01.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAswJEAAAAFAAAA",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAuwDAAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T13:57:16.505Z"
+              "WhenOpened": "2024-09-23T13:57:16.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Sword.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sword.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\Sword.cs",
               "RelativeToolTip": "Assets\\Scripts\\Sword.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAIA9wDoAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T12:54:17.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T12:54:17.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "KnockBack.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\KnockBack.cs",
               "RelativeDocumentMoniker": "Assets\\KnockBack.cs",

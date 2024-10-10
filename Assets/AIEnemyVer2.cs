@@ -179,12 +179,15 @@ public class AIEnemyVer2 : MonoBehaviour
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
         // Tiếp tục đuổi theo mục tiêu nếu còn trong vùng detection
-        float distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (distanceToTarget <= detectionRadius)
+        if(target != null)
         {
-            agent.isStopped = false;
-            agent.SetDestination(target.position);
-            animator.SetBool("Moving", true);
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+            if (distanceToTarget <= detectionRadius)
+            {
+                agent.isStopped = false;
+                agent.SetDestination(target.position);
+                animator.SetBool("Moving", true);
+            }
         }
     }
 

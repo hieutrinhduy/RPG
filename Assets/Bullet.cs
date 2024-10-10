@@ -24,8 +24,6 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Automatically destroy the bullet after 3 seconds
         Destroy(gameObject, 8f);
     }
 

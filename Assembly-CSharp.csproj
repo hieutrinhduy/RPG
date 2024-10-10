@@ -94,7 +94,9 @@
     <Compile Include="Assets\Portal Particle\Scrpt\CameraHolder.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\PyroParticles\Demo\DemoScript.cs" />
+    <Compile Include="Assets\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Fade.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousMouseOrbit.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousEffectsScene.cs" />
+    <Compile Include="Assets\PlayerBullet.cs" />
     <Compile Include="Assets\Skill\Stylized VFX\Skills\_Scripts_\MagicAttacks_Manager.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />

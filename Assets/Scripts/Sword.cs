@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] GameObject parentObject;
+    [SerializeField] public GameObject parentObject;
     [SerializeField] private int damageAmount;
     [SerializeField] private int knockbackThurst;
     private Collider collider;
