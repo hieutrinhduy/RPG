@@ -73,6 +73,7 @@
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
     <Compile Include="Assets\Skill\Stylized VFX\Skills\_Scripts_\Demo_Manager.cs" />
+    <Compile Include="Assets\LevelController.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_DemoLasers.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_LaserDemo.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
     <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+    <Compile Include="Assets\_Heathen Engineering\Samples\UX Examples\Flat Icons [Free]\ToggleSetAnimatorBoolean.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -221,6 +223,7 @@
     <None Include="Assets\Hovl Studio\HSFiles\Shaders\AddTrail.shader" />
     <None Include="Assets\Hovl Studio\AAA Projectiles Vol 1\Demo scenes\Demo files\HS_ProjectileMover pool example.txt" />
     <None Include="Assets\RPGMonsterWave02PBR\SRP\HowToTestSRPs.txt" />
+    <None Include="Assets\_Heathen Engineering\Documentation\UX\Flat Icons [Free]\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_IntegratedEffect.shader" />
     <None Include="Assets\WarFx\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />

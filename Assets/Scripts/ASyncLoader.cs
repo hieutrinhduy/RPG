@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class AsynLoader : MonoBehaviour
+public class ASyncLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static ASyncLoader Instance;
+    [Header("Menu Screen")]
+    [SerializeField] private GameObject loadingScreen;
+    public bool IsChangeToNextScene;
+
+    private void Awake()
     {
-        
+        Instance = this;
+        IsChangeToNextScene = true;
+        DontDestroyOnLoad(gameObject);
+    }
+    public void LoadLevel(string LevelToLoad)
+    {
+        Instantiate(loadingScreen);
+        StartCoroutine(LoadLevelASync(LevelToLoad));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator LoadLevelASync(string LevelToLoad)
     {
-        
+        AsyncOperation loadOperation = SceneManager.LoadSceneAsync(LevelToLoad);
+        yield return null;
     }
 }
