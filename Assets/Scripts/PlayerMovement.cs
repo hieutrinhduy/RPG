@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -57,6 +58,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Image shootFillAmountImage;
     [SerializeField] private Image pokeAttackFillAmountImage;
 
+    [Header("Fx controller")]
+    [SerializeField] private GameObject healingFx;
+
+    Health healthControl;
+    public bool isStun;
     private void Awake()
     {
         controls = new PLayerControlls();
@@ -67,16 +73,19 @@ public class PlayerMovement : MonoBehaviour
         controls.Character.Dash.performed += context => Dash();
         controls.Character.Shoot.performed += context => Fire();
         controls.Character.FAttack.performed += context => Poke();
+        controls.Character.Heal.performed += context => Heal();
     }
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        healthControl = GetComponent<Health>();
     }
 
     private void FixedUpdate()
     {
+        if(healthControl.IsDead || isStun) return;
         CheckGrounded();
         ApplyMovement();
         ApplyMouseRotation();
@@ -85,7 +94,41 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (healthControl.IsDead) { 
+            Fade.Instance.FadeInAndOut();
+            Debug.Log("EndScreen");
+            return; 
+        }
+        //if (isStun) return;
         UpdateCooldowns();
+    }
+
+    private float stunDuration;
+    private float stunEndTime;
+    public void StartStun(float time)
+    {
+        // Nếu đang bị stun, cộng dồn thời gian
+        Debug.Log("Get Stun");
+        if (isStun)
+        {
+            stunDuration += time;
+            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc mới
+        }
+        else
+        {
+            stunDuration = time; // Thiết lập thời gian stun
+            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc
+            StartCoroutine(StunRoutine());
+        }
+    }
+
+    private IEnumerator StunRoutine()
+    {
+        isStun = true;
+        animator.SetBool("Stun", true);
+        yield return new WaitUntil(() => Time.time >= stunEndTime);
+        isStun = false;
+        animator.SetBool("Stun", false);
     }
 
     private void UpdateCooldowns()
@@ -136,6 +179,22 @@ public class PlayerMovement : MonoBehaviour
             directionToLook.y = 0f;
             transform.forward = directionToLook;
         }
+    }
+
+    private void Heal()
+    {
+        StartCoroutine(HealRoutine());
+    }
+    private IEnumerator HealRoutine()
+    {
+        healthControl.currentHealth -= (int)healthControl.startingHealth/3 - healthControl.startingHealth;
+        if(healthControl.currentHealth > healthControl.startingHealth)
+        {
+            healthControl.currentHealth = healthControl.startingHealth;
+        }
+        healingFx.SetActive(true);
+        yield return new WaitForSeconds(0.6f);
+        healingFx.SetActive(false);
     }
 
     private void ApplyMovement()
@@ -218,6 +277,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region Shoot
+    public float rotateAmount;
     private void Fire()
     {
         if (Time.time > lastTimeShoot + shootCooldown)
@@ -225,7 +285,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Shoot");
             lastTimeShoot = Time.time;
 
-            GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, transform.eulerAngles.y - 45, 0));
+            GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, transform.eulerAngles.y - rotateAmount, 0));
             newBullet.GetComponent<PlayerProjectile>().Init(this.gameObject, transform.forward);
         }
     }

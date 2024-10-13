@@ -13,6 +13,7 @@ public class PlayerLevel : MonoBehaviour
     private float currentExp;
     [SerializeField] private float neededExpNextLevel;
     private float remainingExp;
+    [SerializeField] private GameObject LevelUpFx;
 
     private void Update()
     {
@@ -38,5 +39,12 @@ public class PlayerLevel : MonoBehaviour
         remainingExp = 0;
         neededExpNextLevel += 10;
         LevelText.text = level.ToString();
+        StartCoroutine(LevelUpRountine());
+    }
+    private IEnumerator LevelUpRountine()
+    {
+        LevelUpFx.SetActive(true);
+        yield return new WaitForSeconds(0.6f);
+        LevelUpFx.SetActive(false);
     }
 }

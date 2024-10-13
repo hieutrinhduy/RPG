@@ -89,6 +89,15 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Heal"",
+                    ""type"": ""Button"",
+                    ""id"": ""05978e88-02f7-4084-9de0-a92b5d355eec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -212,6 +221,17 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d2b2ff8-da82-4334-b039-29e261fbc7f2"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Heal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -227,6 +247,7 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         m_Character_Dash = m_Character.FindAction("Dash", throwIfNotFound: true);
         m_Character_FAttack = m_Character.FindAction("FAttack", throwIfNotFound: true);
         m_Character_Shoot = m_Character.FindAction("Shoot", throwIfNotFound: true);
+        m_Character_Heal = m_Character.FindAction("Heal", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Character_Dash;
     private readonly InputAction m_Character_FAttack;
     private readonly InputAction m_Character_Shoot;
+    private readonly InputAction m_Character_Heal;
     public struct CharacterActions
     {
         private @PLayerControlls m_Wrapper;
@@ -306,6 +328,7 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Character_Dash;
         public InputAction @FAttack => m_Wrapper.m_Character_FAttack;
         public InputAction @Shoot => m_Wrapper.m_Character_Shoot;
+        public InputAction @Heal => m_Wrapper.m_Character_Heal;
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -336,6 +359,9 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @Heal.started += instance.OnHeal;
+            @Heal.performed += instance.OnHeal;
+            @Heal.canceled += instance.OnHeal;
         }
 
         private void UnregisterCallbacks(ICharacterActions instance)
@@ -361,6 +387,9 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @Heal.started -= instance.OnHeal;
+            @Heal.performed -= instance.OnHeal;
+            @Heal.canceled -= instance.OnHeal;
         }
 
         public void RemoveCallbacks(ICharacterActions instance)
@@ -387,5 +416,6 @@ public partial class @PLayerControlls: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnFAttack(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnHeal(InputAction.CallbackContext context);
     }
 }

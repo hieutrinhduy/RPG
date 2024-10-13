@@ -10,6 +10,7 @@ public class Sword : MonoBehaviour
     private Collider collider;
     public bool dontHaveTurnOffCollider;
     public bool canStun;
+    public bool isEnemy;
     [SerializeField] private float stunTime;
     private void Start()
     {
@@ -18,8 +19,12 @@ public class Sword : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        if(isEnemy)
+        {
+            if (collision.gameObject.CompareTag("Enemy")) return;
+        }
         if (collision.gameObject == parentObject || collision.gameObject.tag == parentObject.tag) return;
+        Debug.Log(collision.gameObject.name);
 
         Health enemyHealth = collision.gameObject.GetComponent<Health>();
         KnockBack enemyKnockBack = collision.gameObject.GetComponent<KnockBack>();
@@ -36,12 +41,17 @@ public class Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject == parentObject || other.gameObject.tag == parentObject.tag) return;
+        Debug.Log(other.gameObject.name);
+        if (isEnemy)
+        {
+            if (other.gameObject.CompareTag("Enemy")) return;
+        }
 
         Health enemyHealth = other.gameObject.GetComponent<Health>();
         KnockBack enemyKnockBack = other.gameObject.GetComponent<KnockBack>();
         AIEnemyVer2 enemyVer2 = other.gameObject.GetComponent<AIEnemyVer2>();
+        PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
         if (enemyHealth != null)
         {
             enemyHealth.TakeDamage(damageAmount);
@@ -54,7 +64,14 @@ public class Sword : MonoBehaviour
         {
             if(enemyVer2 != null)
             {
+                Debug.Log("Stun enemy");
                 enemyVer2.StartStun(stunTime);
+                return;
+            }
+            if (playerMovement != null)
+            {
+                Debug.Log("Stun player");
+                playerMovement.StartStun(stunTime);
                 return;
             }
         }

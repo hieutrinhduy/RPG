@@ -167,6 +167,9 @@ MonoBehaviour:
   damageAmount: 1
   knockbackThurst: 0
   dontHaveTurnOffCollider: 1
+  canStun: 0
+  isEnemy: 1
+  stunTime: 1
 --- !u!1001 &1171145535582424568
 PrefabInstance:
   m_ObjectHideFlags: 0
