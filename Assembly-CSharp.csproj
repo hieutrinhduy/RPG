@@ -61,28 +61,37 @@
     <Analyzer Include="D:\car\Car1-main\2023.2.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\Energy.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ProjectileMover.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMoveDestroy.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Projectile.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DelayActive.cs" />
     <Compile Include="Assets\WarFx\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\levelChange.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousTranslateMove.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\DoubleClickHandler.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousRotateObject.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\Potion.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\CharacterPickController.cs" />
     <Compile Include="Assets\Skill\Stylized VFX\Skills\_Scripts_\Demo_Manager.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\SlideChanger.cs" />
     <Compile Include="Assets\LevelController.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_DemoLasers.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\Durable.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_LaserDemo.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Events\ButtonSound.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\NewMaterialChange.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_New.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Turtle.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Scripts\UnlimitedBladeWorks.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\TeleportationAbility.cs" />
     <Compile Include="Assets\AIEnemyVer2.cs" />
     <Compile Include="Assets\Scripts\ExpBlock.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo.cs" />
@@ -92,14 +101,20 @@
     <Compile Include="Assets\Scripts\PlayerLevel.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\WFX_LightFlicker.cs" />
     <Compile Include="Assets\PLayerControlls.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\Block.cs" />
     <Compile Include="Assets\Skill\Stylized VFX\Skills\_Scripts_\Slash_Manager.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\IAttack.cs" />
     <Compile Include="Assets\Shoot.cs" />
     <Compile Include="Assets\Scripts\ASyncLoader.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ScaleFactorApplyToMaterial.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\ApplicationContext.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\RangeAttack.cs" />
     <Compile Include="Assets\Portal Particle\Scrpt\CameraHolder.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_EffectSound.cs" />
     <Compile Include="Assets\PyroParticles\Demo\DemoScript.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\GameLoader.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\OneKeyAction.cs" />
     <Compile Include="Assets\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Fade.cs" />
@@ -109,6 +124,7 @@
     <Compile Include="Assets\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\Dialog.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ProjectileMover2D.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Events\PlaceHolderDisable.cs" />
     <Compile Include="Assets\Scripts\SceneChanger.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ShieldActivate.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_DemoShooting.cs" />
@@ -118,34 +134,47 @@
     <Compile Include="Assets\Scripts\PlayerHpBar.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\BossAi.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_CameraHolder.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\AppExit.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\GamePauser.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_DemoShooting2D.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Events\AudioEventManager.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\_ObjectsMakeBase.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\OpenMainMenu.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousEffectsScene.cs" />
     <Compile Include="Assets\PlayerBullet.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ParticleCollisionInstance.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\KeyboardControl.cs" />
     <Compile Include="Assets\Skill\Stylized VFX\Skills\_Scripts_\MagicAttacks_Manager.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DestroyObject.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\ToggleArrowController.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\LookAtTarget.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\MovableKinematic.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\SimpleAi.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
     <Compile Include="Assets\Scripts\EnemyHpBar.cs" />
     <Compile Include="Assets\ParticleController.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_Laser2.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_HittedObject.cs" />
     <Compile Include="Assets\Scripts\AIEnemy.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\DropDownArrowController.cs" />
     <Compile Include="Assets\PyroParticles\Demo\DemoScriptEditor.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_Rotator.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Events\TimerEvent.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\MeleeAttack.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMove.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Mini Simple Characters Skeleton Demo\Readme\Scripts\Readme.cs" />
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\HeavyAttack.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
     <Compile Include="Assets\_Heathen Engineering\Samples\UX Examples\Flat Icons [Free]\ToggleSetAnimatorBoolean.cs" />
   </ItemGroup>
@@ -225,6 +254,7 @@
     <None Include="Assets\RPGMonsterWave02PBR\SRP\HowToTestSRPs.txt" />
     <None Include="Assets\_Heathen Engineering\Documentation\UX\Flat Icons [Free]\Read Me.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\ClassicFantasyRPG_UI\Shaders\Grayscale.shader" />
     <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_IntegratedEffect.shader" />
     <None Include="Assets\WarFx\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />
     <None Include="Assets\WarFx\WarFX\!WarFX Readme.txt" />
@@ -1209,6 +1239,10 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
