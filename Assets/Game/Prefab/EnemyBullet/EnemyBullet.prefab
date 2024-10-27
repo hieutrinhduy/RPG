@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
+  BulletHitFx: {fileID: 7963070265621199737, guid: 405d9bc15cae5b14c9a441afd4d07ff4, type: 3}
 --- !u!54 &7340605311892778417
 Rigidbody:
   m_ObjectHideFlags: 0

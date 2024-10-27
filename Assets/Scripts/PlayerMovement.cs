@@ -3,6 +3,8 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Cinemachine;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -63,6 +65,8 @@ public class PlayerMovement : MonoBehaviour
 
     Health healthControl;
     public bool isStun;
+
+    private CinemachineImpulseSource cinemachineImpulseSource;
     private void Awake()
     {
         controls = new PLayerControlls();
@@ -81,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         healthControl = GetComponent<Health>();
+        cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     private void FixedUpdate()
@@ -225,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
             lastTimeAttack = Time.time;
             StartCoroutine(SwordColliderRoutine(0.5f));
             normalAttackFx.Play();
+            //cinemachineImpulseSource.GenerateImpulse();
         }
     }
 
@@ -245,6 +251,7 @@ public class PlayerMovement : MonoBehaviour
             lastTimeUltimateAttack = Time.time;
             StartCoroutine(UltimateSwordColliderRoutine(2f));
             ultimateAttackFx.Play();
+            //cinemachineImpulseSource.GenerateImpulse();
         }
     }
 
@@ -287,6 +294,7 @@ public class PlayerMovement : MonoBehaviour
 
             GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.Euler(0, transform.eulerAngles.y - rotateAmount, 0));
             newBullet.GetComponent<PlayerProjectile>().Init(this.gameObject, transform.forward);
+            //cinemachineImpulseSource.GenerateImpulse();
         }
     }
     #endregion
@@ -298,6 +306,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("Poke");
             lastTimePoke = Time.time;
+            //cinemachineImpulseSource.GenerateImpulse();
         }
     }
     #endregion

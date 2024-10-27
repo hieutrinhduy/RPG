@@ -1,40 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+
 
 public class Bomb : MonoBehaviour
 {
-    private AIEnemy AIEnemy;
+    private Health health;
     public float expForce, radius;
     public GameObject explodeEffect;
     public int damage;
     bool exploded;
+    private CinemachineImpulseSource cinemachineImpulseSource;
     private void Start()
     {
-        AIEnemy = GetComponent<AIEnemy>();
+        health = GetComponent<Health>();
         exploded = false;
+        cinemachineImpulseSource= GetComponent<CinemachineImpulseSource>();
     }
 
     private void Update()
     {
-        if (AIEnemy != null)
-        {
-            if (AIEnemy.isDead && !exploded)
-            {
-                Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
-                Instantiate(explodeEffect, transform.position, Quaternion.identity);
-                foreach (Collider collider in colliders)
-                {
-                    if (collider.GetComponent<Rigidbody>() != null)
-                    {
-                        collider.GetComponent<Rigidbody>().AddExplosionForce(expForce, transform.position, radius);
-                        collider.GetComponent<Health>().TakeDamage(damage);
-                    }
-                }
-                exploded = true;
-                //Destroy(gameObject);
-            }
-        }
+
+    }
+ 
+    public void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        Instantiate(explodeEffect, transform.position, Quaternion.identity);
+        //foreach (Collider collider in colliders)
+        //{
+        //    if (collider.GetComponent<Rigidbody>() != null)
+        //    {
+        //        collider.GetComponent<Rigidbody>().AddExplosionForce(expForce, transform.position, radius);
+        //        collider.GetComponent<Health>().TakeDamage(damage);
+        //    }
+        //}
+        exploded = true;
+        cinemachineImpulseSource.GenerateImpulse();
+        Debug.Log("Explode");
+        //Destroy(gameObject);
     }
 
     // Vẽ Gizmo để thấy bán kính vụ nổ

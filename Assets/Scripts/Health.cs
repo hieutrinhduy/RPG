@@ -16,7 +16,8 @@ public class Health : MonoBehaviour
 
     public int currentHealth;
 
-    [SerializeField] private Image HpBar;
+    [SerializeField] private Image HpBarFillAmount;
+    [SerializeField] private GameObject HpBar;
 
     [SerializeField] private Material defaultMaterial;
     [SerializeField] private Material whiteMaterial;
@@ -27,11 +28,16 @@ public class Health : MonoBehaviour
     Animator animator;
     [SerializeField] private GameObject dropedExpPrefab;
 
+    private Bomb bomb;
+
+
+
     private void Start()
     {
         ResetHealth();
         animator = GetComponent<Animator>();
         aIEnemy = GetComponent<AIEnemy>();
+        bomb= GetComponent<Bomb>();
         IsDead = false;
     }
     private void Awake()
@@ -40,9 +46,9 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if (HpBar != null)
+        if (HpBarFillAmount != null)
         {
-            HpBar.fillAmount = (float)currentHealth/startingHealth;
+            HpBarFillAmount.fillAmount = (float)currentHealth/startingHealth;
         }
     }
     public void ResetHealth()
@@ -59,6 +65,11 @@ public class Health : MonoBehaviour
         {
             animator.ResetTrigger("Hit"); // Reset any "Hit" triggers
             animator.SetTrigger("Die");
+            IsDead = true;
+            if(bomb != null)
+            {
+                bomb.Explode();
+            }
             if (HpBar != null)
             {
                 HpBar.transform.parent.gameObject.SetActive(false);
@@ -68,13 +79,16 @@ public class Health : MonoBehaviour
             {
                 aIEnemy.isDead = true;
             }
+            if(HpBar != null)
+            {
+                HpBar.SetActive(false);
+            }
             OnDeath?.Invoke(this);
             Destroy(gameObject, 1f);
             if(dropedExpPrefab != null)
             {
                 Instantiate(dropedExpPrefab, transform.position, Quaternion.identity);
             }
-            IsDead = true;
         }
         else
         {

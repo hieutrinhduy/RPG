@@ -1,0 +1,314 @@
+Using pre-set license
+Built from '2023.2/staging' branch; Version is '2023.2.20f1 (0e25a174756c) revision 927137'; Using compiler version '193431935'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Professional' Language: 'en' Physical Memory: 15724 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\car\Car1-main\2023.2.20f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+D:/RPG
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+54186
+-job-worker-count
+5
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: D:/RPG
+D:/RPG
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [4604] Host "[IP] 192.168.1.221 [Port] 0 [Flags] 2 [Guid] 2267947439 [EditorId] 2267947439 [Version] 1048832 [Id] WindowsEditor(7,Admin-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4604] Host "[IP] 192.168.1.221 [Port] 0 [Flags] 2 [Guid] 2267947439 [EditorId] 2267947439 [Version] 1048832 [Id] WindowsEditor(7,Admin-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 47.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.20f1 (0e25a174756c)
+[Subsystems] Discovering subsystems at path D:/car/Car1-main/2023.2.20f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/RPG/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f9d)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   30.0.15.1274
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Initialize mono
+Mono path[0] = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/Managed'
+Mono path[1] = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/car/Car1-main/2023.2.20f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56968
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/car/Car1-main/2023.2.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: D:/car/Car1-main/2023.2.20f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.404574 seconds.
+- Loaded All Assemblies, in  9.520 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 357 ms
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.698 seconds
+Domain Reload Profiling: 10218ms
+	BeginReloadAssembly (7269ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (480ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (445ms)
+	LoadAllAssembliesAndSetupDomain (1314ms)
+		LoadAssemblies (7269ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1311ms)
+			TypeCache.Refresh (1309ms)
+				TypeCache.ScanAssembly (1034ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (698ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (653ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (456ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (6ms)
+			ProcessInitializeOnLoadAttributes (137ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  9.086 seconds
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.671 seconds
+Domain Reload Profiling: 9758ms
+	BeginReloadAssembly (1762ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (7251ms)
+		LoadAssemblies (6307ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1048ms)
+			TypeCache.Refresh (1028ms)
+				TypeCache.ScanAssembly (936ms)
+			BuildScriptInfoCaches (13ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (672ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (412ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (20ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (20ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 70 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2185 unused Assets / (0.7 MB). Loaded Objects now: 2842.
+Memory consumption went from 203.8 MB to 203.0 MB.
+Total: 5.491000 ms (FindLiveObjects: 0.232800 ms CreateObjectMapping: 0.221500 ms MarkObjects: 4.436700 ms  DeleteObjects: 0.599400 ms)
+
+========================================================================
+Received Prepare
+Shader 'Custom/AdditiveTintable': fallback shader 'Particles/Additive (Soft)' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2187 unused Assets / (0.6 MB). Loaded Objects now: 2851.
+Memory consumption went from 185.4 MB to 184.7 MB.
+Total: 4.776500 ms (FindLiveObjects: 0.233300 ms CreateObjectMapping: 0.106000 ms MarkObjects: 3.901600 ms  DeleteObjects: 0.534800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 13009.459266 seconds.
+  path: Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Yellow/54_discord.png
+  artifactKey: Guid(eed03f2064bc6c84aa9d7b4b388ac37f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Yellow/54_discord.png using Guid(eed03f2064bc6c84aa9d7b4b388ac37f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e0d96e296cddb83a847f81efbf745b53') in 0.0967333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_med_2.prefab
+  artifactKey: Guid(e9a3dc1e7ad9ebf45b7b2cb54a31c2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_med_2.prefab using Guid(e9a3dc1e7ad9ebf45b7b2cb54a31c2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '476a6029cea8b4c1943883f542c17fa4') in 0.1856044 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_med.prefab
+  artifactKey: Guid(ddb8911c7ed37654995036cccaa8d68f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_med.prefab using Guid(ddb8911c7ed37654995036cccaa8d68f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '52710890f66b3a334afc7242a3250645') in 0.0619099 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_large.prefab
+  artifactKey: Guid(1acfd47d41f47084995deaf65b67c7cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_large.prefab using Guid(1acfd47d41f47084995deaf65b67c7cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa0084b44069fcf035613575c1ea128e') in 0.0395231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_small.prefab
+  artifactKey: Guid(7a2fa68522aa0014cae1620aa228b9ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_small.prefab using Guid(7a2fa68522aa0014cae1620aa228b9ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aee007a64a410ac7f9e33ce9b9f8d7d5') in 0.0322503 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_med.prefab
+  artifactKey: Guid(19fb0666b2e2cbe4398719acee5198e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_med.prefab using Guid(19fb0666b2e2cbe4398719acee5198e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1d48de1f42f6bb099ec938facd5ec383') in 0.0339451 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Red/54_discord.png
+  artifactKey: Guid(f59d923da29104d48bca3089c9168649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Red/54_discord.png using Guid(f59d923da29104d48bca3089c9168649) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e7633af8d7f837b829d8d195f9d123fa') in 0.0158888 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_1(NotScriptBased)/Materials/Effect_03_Materials/Effect_03_BeamCore.mat
+  artifactKey: Guid(b95b4919c2c821449ac723c7246f2d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_1(NotScriptBased)/Materials/Effect_03_Materials/Effect_03_BeamCore.mat using Guid(b95b4919c2c821449ac723c7246f2d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a4c68a46d9ac0f7e931cdce05cb13cc1') in 0.0623344 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_NeutronCore.prefab
+  artifactKey: Guid(1530339fe8063884bacec86945e25ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_NeutronCore.prefab using Guid(1530339fe8063884bacec86945e25ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f5acf4266e259251e4464b6e095c878') in 0.1735959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 58
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_1(NotScriptBased)/Effects/Effect_21_GroundScatter/Effect_21_InnertcoreRelease.prefab
+  artifactKey: Guid(519ff72a211faaf43b8be89b3169a13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_1(NotScriptBased)/Effects/Effect_21_GroundScatter/Effect_21_InnertcoreRelease.prefab using Guid(519ff72a211faaf43b8be89b3169a13d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43be7c5b9a867e690f44b3710abb15f4') in 0.0817548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_FusionCore.prefab
+  artifactKey: Guid(949f9fbab21eb5047859c8c6c0e2c763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_FusionCore.prefab using Guid(949f9fbab21eb5047859c8c6c0e2c763) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5721927652213a9df7a05e7ffb95adc4') in 0.1474554 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 54
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_DarkMatterCore.prefab
+  artifactKey: Guid(b99d775f4dbfa1d4292da522a136bf46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpecialSkillsEffectsPack/AllEffects/EffectsSet_2(ScriptBased)/Effects/Effect_47_ChildrenOfUniverse/Effect_47_Parts/Effect_47_DarkMatterCore.prefab using Guid(b99d775f4dbfa1d4292da522a136bf46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b1a87d4869dfd35a53247f2bd9a04f52') in 0.1578237 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 40
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Purple/54_discord.png
+  artifactKey: Guid(c7b7f11f19f266a43a5868d8909fe840) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ClassicFantasyRPG_UI/ARTWORKS/UIicons/Flat/Purple/54_discord.png using Guid(c7b7f11f19f266a43a5868d8909fe840) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '723d6b34871cf37f1af967dc400ff97c') in 0.0153939 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_small_2.prefab
+  artifactKey: Guid(19dc4d9e3089a7e47aaa95cd015de23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_convex_small_2.prefab using Guid(19dc4d9e3089a7e47aaa95cd015de23e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1442fe91fa9021982ebe617bb96c2310') in 0.0346477 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_small_2.prefab
+  artifactKey: Guid(4e21e11dbacb15245b8060a1961f83e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fantastic Dungeon Pack/prefabs/MODULAR/02_COMPS/Wall/PivotEdge/COMP_Wall_01_E_corner_concave_small_2.prefab using Guid(4e21e11dbacb15245b8060a1961f83e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5bcbb26afb6a4541824ae9c30a0893bc') in 0.0327343 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+

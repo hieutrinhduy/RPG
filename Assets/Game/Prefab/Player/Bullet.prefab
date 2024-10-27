@@ -19779,10 +19779,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 5051793236145530793}
-  damageAmount: 5
+  damageAmount: 2
   knockbackThurst: 1
   dontHaveTurnOffCollider: 1
   canStun: 0
+  isEnemy: 0
   stunTime: 0
 --- !u!1 &6019715142784509075
 GameObject:

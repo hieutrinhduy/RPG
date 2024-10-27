@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour
     private GameObject player;
     private Vector3 fireDir;
     [SerializeField] private float moveSpeed;
-
+    [SerializeField] private GameObject BulletHitFx;
     private Rigidbody rb;
 
     private void Start()
@@ -31,6 +31,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground")) return;
         if (other.gameObject.CompareTag("Enemy")) return;
+        Instantiate(BulletHitFx, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

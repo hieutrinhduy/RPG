@@ -29,6 +29,12 @@ public class AIEnemyVer2 : MonoBehaviour
         animator = GetComponent<Animator>();
         isDead = false;
         isStunning = false;
+
+        // Check if the agent is on a NavMesh at the start
+        if (!agent.isOnNavMesh)
+        {
+            Debug.LogWarning("Agent is not on the NavMesh. Ensure it starts on a NavMesh surface.");
+        }
     }
 
     private void Update()
@@ -38,7 +44,7 @@ public class AIEnemyVer2 : MonoBehaviour
             return;
         }
 
-        if(isStunning)
+        if (isStunning && agent.isActiveAndEnabled && agent.isOnNavMesh)
         {
             agent.isStopped = true;
             return;
@@ -47,23 +53,19 @@ public class AIEnemyVer2 : MonoBehaviour
         timeSinceLastAttack += Time.deltaTime;
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-        // Xoay người về phía mục tiêu khi đang tấn công
         if (isAttacking)
         {
             RotateTowardsTarget();
         }
 
-        // Kiểm tra xem target có nằm trong vùng detection hay không
         if (distanceToTarget <= detectionRadius && !isAttacking)
         {
-            // Đuổi theo mục tiêu nếu ngoài vùng tấn công
-            if (distanceToTarget > agent.stoppingDistance)
+            if (distanceToTarget > agent.stoppingDistance && agent.isOnNavMesh)
             {
                 agent.isStopped = false;
                 agent.SetDestination(target.position);
                 animator.SetBool("Moving", agent.velocity.magnitude > 0.1f);
             }
-            // Bắt đầu tấn công nếu target trong vùng tấn công
             else if (timeSinceLastAttack >= attackCooldown)
             {
                 StartCoroutine(StartAttack());
@@ -80,16 +82,15 @@ public class AIEnemyVer2 : MonoBehaviour
 
     public void StartStun(float time)
     {
-        // Nếu đang bị stun, cộng dồn thời gian
         if (isStunning)
         {
             stunDuration += time;
-            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc mới
+            stunEndTime = Time.time + stunDuration;
         }
         else
         {
-            stunDuration = time; // Thiết lập thời gian stun
-            stunEndTime = Time.time + stunDuration; // Tính toán thời gian kết thúc
+            stunDuration = time;
+            stunEndTime = Time.time + stunDuration;
             StartCoroutine(StunRoutine());
         }
     }
@@ -97,55 +98,34 @@ public class AIEnemyVer2 : MonoBehaviour
     private IEnumerator StunRoutine()
     {
         isStunning = true;
-        agent.isStopped = true; // Dừng NavMeshAgent khi bị stun
-        agent.velocity = Vector3.zero; // Đảm bảo NavMeshAgent không di chuyển
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
         animator.SetBool("Stun", true);
         animator.SetBool("Moving", false);
 
-        // Chờ đến khi thời gian stun kết thúc
         yield return new WaitUntil(() => Time.time >= stunEndTime);
 
         isStunning = false;
-        agent.isStopped = false; // Cho phép NavMeshAgent hoạt động lại sau khi stun kết thúc
+        agent.isStopped = false;
         animator.SetBool("Stun", false);
     }
-
-
-    private IEnumerator StunRoutine(float stunTime)
-    {
-        isStunning = true;
-        agent.isStopped = true; // Dừng NavMeshAgent khi bị stun
-        agent.velocity = Vector3.zero; // Đảm bảo NavMeshAgent không di chuyển
-        animator.SetBool("Stun", true);
-        animator.SetBool("Moving", false);
-
-        yield return new WaitForSeconds(stunTime);
-
-        isStunning = false;
-        agent.isStopped = false; // Cho phép NavMeshAgent hoạt động lại sau khi stun kết thúc
-        animator.SetBool("Stun", false);
-    }
-
 
     private IEnumerator StartAttack()
     {
-        if (isStunning) yield break; // Nếu đang bị stun thì không tấn công
+        if (isStunning) yield break;
 
         float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-        // Nếu target ra khỏi vùng tấn công trước khi bắt đầu tấn công
         if (distanceToTarget > agent.stoppingDistance)
         {
             isAttacking = false;
             yield break;
         }
 
-        // Bắt đầu tấn công
         isAttacking = true;
         StopMovement();
         animator.SetBool("IsAttacking", true);
 
-        // Xoay người về phía mục tiêu trong khi tấn công
         RotateTowardsTarget();
 
         if (hasMultipleAttack)
@@ -161,32 +141,34 @@ public class AIEnemyVer2 : MonoBehaviour
 
         timeSinceLastAttack = 0f;
 
-        // Kiểm tra khoảng cách sau lần tấn công đầu tiên
         distanceToTarget = Vector3.Distance(transform.position, target.position);
         if (distanceToTarget > agent.stoppingDistance)
         {
             EndAttack();
-            yield break; // Nếu target ra khỏi tầm đánh, dừng tấn công
+            yield break;
         }
 
-        // Kết thúc tấn công sau một khoảng thời gian
         Invoke(nameof(EndAttack), attackCooldown);
     }
-
 
     private void EndAttack()
     {
         isAttacking = false;
         animator.SetBool("IsAttacking", false);
-        // Tiếp tục đuổi theo mục tiêu nếu còn trong vùng detection
-        if(target != null)
+
+        if (target != null && agent != null)
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
-            if (distanceToTarget <= detectionRadius)
+
+            if (distanceToTarget <= detectionRadius && agent.isActiveAndEnabled && agent.isOnNavMesh)
             {
                 agent.isStopped = false;
                 agent.SetDestination(target.position);
                 animator.SetBool("Moving", true);
+            }
+            else
+            {
+                Debug.LogWarning("Agent cannot resume: Agent is either inactive, not on NavMesh, or target is out of range.");
             }
         }
     }
@@ -209,22 +191,23 @@ public class AIEnemyVer2 : MonoBehaviour
 
     private void StopMovement()
     {
-        agent.isStopped = true;
-        animator.SetBool("Moving", false);
+        if (agent.isActiveAndEnabled && agent.isOnNavMesh)
+        {
+            agent.isStopped = true;
+            animator.SetBool("Moving", false);
+        }
     }
 
     private void RotateTowardsTarget()
     {
-        if (target == null || isStunning) return; 
+        if (target == null || isStunning) return;
 
         Vector3 direction = (target.position - transform.position).normalized;
-        direction.y = 0; // Giữ nguyên độ cao
+        direction.y = 0;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
 
-        // Quay từ từ về phía mục tiêu
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
     }
-
 
     private void OnDrawGizmosSelected()
     {

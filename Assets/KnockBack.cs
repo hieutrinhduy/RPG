@@ -21,7 +21,7 @@ public class KnockBack : MonoBehaviour
 
     public void GetKnockBack(Vector3 hitPosition, int knockBackThrust)
     {
-        if (isKnockback) return;  // Nếu đang bị knockback, không thể knockback lần nữa
+        if (isKnockback) return; // Nếu đang bị knockback, không thể knockback lần nữa
 
         // Bật cờ knockback
         isKnockback = true;
@@ -31,11 +31,12 @@ public class KnockBack : MonoBehaviour
 
         if (_rb != null)
         {
-            if(NavMeshAgent != null)
+            if (NavMeshAgent != null)
             {
                 oldSpeed = NavMeshAgent.speed;
-                NavMeshAgent.speed = 0;
+                NavMeshAgent.enabled = false; // Temporarily disable NavMeshAgent
             }
+
             // Thêm lực knockback với chế độ lực tức thời
             _rb.isKinematic = false;
             _rb.AddForce(_hitDirection * knockBackThrust, ForceMode.Impulse);
@@ -43,26 +44,36 @@ public class KnockBack : MonoBehaviour
             Debug.Log("KnockBack");
 
             // Bắt đầu coroutine để reset velocity sau khi knockback kết thúc
-            StartCoroutine(ResetKnockback());
+            // Kiểm tra trạng thái của game object trước khi bắt đầu coroutine
+            if (gameObject.activeInHierarchy)
+            {
+                StartCoroutine(ResetKnockback());
+            }
         }
     }
+
 
     private IEnumerator ResetKnockback()
     {
         // Chờ trong thời gian knockbackDuration
         yield return new WaitForSeconds(knockbackDuration);
 
-        // Reset velocity sau thời gian knockback
-        if (_rb != null)
+        if (gameObject != null)
         {
-            _rb.velocity = Vector3.zero;
-            _rb.isKinematic = true;
+            // Reset velocity sau thời gian knockback
+            if (_rb != null)
+            {
+                _rb.velocity = Vector3.zero;
+                _rb.isKinematic = true;
+            }
+            if (NavMeshAgent != null)
+            {
+                NavMeshAgent.enabled = true; // Re-enable NavMeshAgent
+                NavMeshAgent.speed = oldSpeed;
+            }
+            // Tắt cờ knockback để cho phép knockback lần nữa
+            isKnockback = false;
         }
-        if (NavMeshAgent != null)
-        {
-            NavMeshAgent.speed = oldSpeed;
-        }
-        // Tắt cờ knockback để cho phép knockback lần nữa
-        isKnockback = false;
     }
+
 }

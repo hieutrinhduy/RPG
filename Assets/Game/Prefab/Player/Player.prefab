@@ -29787,6 +29787,7 @@ MonoBehaviour:
   knockbackThurst: 0
   dontHaveTurnOffCollider: 0
   canStun: 0
+  isEnemy: 0
   stunTime: 0
 --- !u!1 &1488657895813831781
 GameObject:
@@ -56047,6 +56048,7 @@ MonoBehaviour:
   knockbackThurst: 20
   dontHaveTurnOffCollider: 1
   canStun: 1
+  isEnemy: 0
   stunTime: 3
 --- !u!1 &5489998162283732262
 GameObject:
@@ -91117,10 +91119,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.09150876
-  m_Height: 1.0398577
+  m_Radius: 0.15
+  m_Height: 1.87
   m_Direction: 1
-  m_Center: {x: 0.0026076967, y: 0.6986044, z: -0.004850393}
+  m_Center: {x: 0.06047759, y: 0.69860446, z: -0.0048496174}
 --- !u!114 &3347498804703460406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91138,6 +91140,7 @@ MonoBehaviour:
   knockbackThurst: 20
   dontHaveTurnOffCollider: 0
   canStun: 0
+  isEnemy: 0
   stunTime: 0
 --- !u!1 &7415717544673316890
 GameObject:
@@ -96431,6 +96434,9 @@ MonoBehaviour:
   dashFillAmountImage: {fileID: 0}
   shootFillAmountImage: {fileID: 0}
   pokeAttackFillAmountImage: {fileID: 0}
+  healingFx: {fileID: 0}
+  isStun: 0
+  rotateAmount: 0
 --- !u!114 &4026423986977446213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96445,6 +96451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   currentHealth: 0
+  HpBarFillAmount: {fileID: 0}
   HpBar: {fileID: 0}
   defaultMaterial: {fileID: 2100000, guid: f323cced30244554986ee5e9f5dd8b67, type: 2}
   whiteMaterial: {fileID: 2100000, guid: 9617393e2571b324b8c27de641f6e41e, type: 2}
@@ -96476,6 +96483,7 @@ MonoBehaviour:
   ExpProgress: {fileID: 0}
   level: 1
   neededExpNextLevel: 6
+  LevelUpFx: {fileID: 0}
 --- !u!54 &805690407108252460
 Rigidbody:
   m_ObjectHideFlags: 0

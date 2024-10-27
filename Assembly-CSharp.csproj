@@ -61,14 +61,18 @@
     <Analyzer Include="D:\car\Car1-main\2023.2.20f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\ExplodingProjectile.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\Energy.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_ProjectileMover.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\CameraShakeProjectile.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\ForEffects\ObjectMoveDestroy.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Projectile.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\Projectile.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\DelayActive.cs" />
     <Compile Include="Assets\WarFx\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\levelChange.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\CameraShake.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\VariousTranslateMove.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\DoubleClickHandler.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
@@ -87,8 +91,11 @@
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Events\ButtonSound.cs" />
     <Compile Include="Assets\SpecialSkillsEffectsPack\Scripts\NewMaterialChange.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\WFX_Demo_New.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\EffectActor.cs" />
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Turtle.cs" />
+    <Compile Include="Assets\EffectCore\scripts\destroyMe.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\CameraShakeCaller.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Scripts\UnlimitedBladeWorks.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\TeleportationAbility.cs" />
@@ -135,6 +142,7 @@
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\BossAi.cs" />
+    <Compile Include="Assets\EffectCore\scripts\particleColorChangerMaster.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_CameraHolder.cs" />
@@ -163,6 +171,7 @@
     <Compile Include="Assets\ParticleController.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_Laser2.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\HS_HittedObject.cs" />
+    <Compile Include="Assets\EffectCore\packs\WebDemoAssets\scripts\projectileActor.cs" />
     <Compile Include="Assets\Scripts\AIEnemy.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\DropDownArrowController.cs" />
     <Compile Include="Assets\PyroParticles\Demo\DemoScriptEditor.cs" />
@@ -188,6 +197,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
     <None Include="Assets\SpecialSkillsEffectsPack\Shader_ForEffects\Shader_Decal.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\EffectCore\packs\HitSplatterEffectPack1\Tips &amp; Documentations HitSplatterEffectPack1.txt" />
     <None Include="Assets\Hovl Studio\AAA Projectiles Vol 1\Prefabs\Readme.txt" />
     <None Include="Assets\Fantastic Dungeon Pack\scenes\README.txt" />
     <None Include="Assets\Hovl Studio\AOE Magic spells Vol.1\Demo AOE skills\Readme.txt" />

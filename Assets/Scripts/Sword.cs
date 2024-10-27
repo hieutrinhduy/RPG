@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Sword : MonoBehaviour
 {
@@ -12,32 +13,35 @@ public class Sword : MonoBehaviour
     public bool canStun;
     public bool isEnemy;
     [SerializeField] private float stunTime;
+
+    private CinemachineImpulseSource cinemachineImpulseSource;
     private void Start()
     {
         collider = GetComponent<Collider>();
+        cinemachineImpulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(isEnemy)
-        {
-            if (collision.gameObject.CompareTag("Enemy")) return;
-        }
-        if (collision.gameObject == parentObject || collision.gameObject.tag == parentObject.tag) return;
-        Debug.Log(collision.gameObject.name);
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(isEnemy)
+    //    {
+    //        if (collision.gameObject.CompareTag("Enemy")) return;
+    //    }
+    //    if (collision.gameObject == parentObject || collision.gameObject.tag == parentObject.tag) return;
+    //    Debug.Log(collision.gameObject.name);
 
-        Health enemyHealth = collision.gameObject.GetComponent<Health>();
-        KnockBack enemyKnockBack = collision.gameObject.GetComponent<KnockBack>();
-        if (enemyHealth != null)
-        {
-            enemyHealth.TakeDamage(damageAmount);
-        }
-        if (enemyKnockBack != null && knockbackThurst != null)
-        {
-            Vector3 hitPosition = transform.position; // Vị trí va chạm chính là vị trí của thanh kiếm
-            enemyKnockBack.GetKnockBack(hitPosition, knockbackThurst);
-        }
-    }
+    //    Health enemyHealth = collision.gameObject.GetComponent<Health>();
+    //    KnockBack enemyKnockBack = collision.gameObject.GetComponent<KnockBack>();
+    //    if (enemyHealth != null)
+    //    {
+    //        enemyHealth.TakeDamage(damageAmount);
+    //    }
+    //    if (enemyKnockBack != null && knockbackThurst != null)
+    //    {
+    //        Vector3 hitPosition = transform.position; // Vị trí va chạm chính là vị trí của thanh kiếm
+    //        enemyKnockBack.GetKnockBack(hitPosition, knockbackThurst);
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -54,6 +58,10 @@ public class Sword : MonoBehaviour
         PlayerMovement playerMovement = other.gameObject.GetComponent<PlayerMovement>();
         if (enemyHealth != null)
         {
+            if(cinemachineImpulseSource != null)
+            {
+                cinemachineImpulseSource.GenerateImpulse();
+            }
             enemyHealth.TakeDamage(damageAmount);
             if (!dontHaveTurnOffCollider)
             {
