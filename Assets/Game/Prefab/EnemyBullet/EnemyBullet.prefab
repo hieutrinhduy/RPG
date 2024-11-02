@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_FireMagic_Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 3522067147260334173, guid: c521c4ac20f688348a7a3133170b6f4f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4020357547344719492, guid: c521c4ac20f688348a7a3133170b6f4f, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 1

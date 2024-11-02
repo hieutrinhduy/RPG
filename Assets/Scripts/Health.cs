@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
     [SerializeField] private AIEnemy aIEnemy;
     Animator animator;
     [SerializeField] private GameObject dropedExpPrefab;
+    [SerializeField] private GameObject BloodSplatterFx;
 
     private Bomb bomb;
 
@@ -61,6 +62,10 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         Debug.Log("- " + amount);
         StartCoroutine(WhiteFlashRountine(whiteFlashTime));
+        if(BloodSplatterFx != null)
+        {
+            Instantiate(BloodSplatterFx, transform.position, Quaternion.identity);
+        }
         if (currentHealth <= 0)
         {
             animator.ResetTrigger("Hit"); // Reset any "Hit" triggers
