@@ -416,6 +416,7 @@
 "Assets/ClassicFantasyRPG_UI/Scripts/Interacting/RangeAttack.cs"
 "Assets/ClassicFantasyRPG_UI/Scripts/Interacting/TeleportationAbility.cs"
 "Assets/ClassicFantasyRPG_UI/Scripts/Projectile.cs"
+"Assets/CutSceneTrigger.cs"
 "Assets/EffectCore/scripts/destroyMe.cs"
 "Assets/EffectCore/scripts/particleColorChangerMaster.cs"
 "Assets/Fade.cs"
