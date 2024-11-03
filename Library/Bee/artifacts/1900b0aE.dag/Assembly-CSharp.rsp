@@ -486,6 +486,7 @@
 "Assets/SpecialSkillsEffectsPack/Scripts/VariousMouseOrbit.cs"
 "Assets/SpecialSkillsEffectsPack/Scripts/VariousRotateObject.cs"
 "Assets/SpecialSkillsEffectsPack/Scripts/VariousTranslateMove.cs"
+"Assets/TeleportPoint.cs"
 "Assets/Turtle.cs"
 "Assets/WarFx/WarFX/Demo/Assets/CFX_AutoStopLoopedEffect.cs"
 "Assets/WarFx/WarFX/Demo/Assets/CFX_Demo_RandomDir.cs"

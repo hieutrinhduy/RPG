@@ -6,7 +6,7 @@ using Cinemachine;
 public class Sword : MonoBehaviour
 {
     [SerializeField] public GameObject parentObject;
-    [SerializeField] private int damageAmount;
+    [SerializeField] private float damageAmount;
     [SerializeField] private int knockbackThurst;
     private Collider collider;
     public bool dontHaveTurnOffCollider;

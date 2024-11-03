@@ -90,6 +90,7 @@
     <Compile Include="Assets\WarFx\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
     <Compile Include="Assets\Turtle.cs" />
     <Compile Include="Assets\EffectCore\scripts\destroyMe.cs" />
+    <Compile Include="Assets\TeleportPoint.cs" />
     <Compile Include="Assets\WarFx\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
     <Compile Include="Assets\Scripts\UnlimitedBladeWorks.cs" />
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Interacting\TeleportationAbility.cs" />

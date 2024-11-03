@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
 
     private Health health;
 
-    public int currentHealth;
+    public float currentHealth;
 
     [SerializeField] private Image HpBarFillAmount;
     [SerializeField] private GameObject HpBar;
@@ -57,7 +57,7 @@ public class Health : MonoBehaviour
         currentHealth = startingHealth;
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
         Debug.Log("- " + amount);

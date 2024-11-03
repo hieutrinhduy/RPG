@@ -31,7 +31,9 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ground")) return;
         if (other.gameObject.CompareTag("Enemy")) return;
+        if (other.gameObject.name.Contains("Cube")) return;
         Instantiate(BulletHitFx, transform.position, Quaternion.identity);
+        Debug.Log("Collider with: " + other.gameObject);
         Destroy(gameObject);
     }
 }
