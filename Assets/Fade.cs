@@ -63,8 +63,8 @@ public class Fade : MonoBehaviour
 
     private void Respawn()
     {
-        //Transform player = Instantiate(_playerPrefab, _respawnPoint.position, Quaternion.identity).transform;
-        //_virtualCam.Follow = player;
+        //Transform Player = Instantiate(_playerPrefab, _respawnPoint.position, Quaternion.identity).transform;
+        //_virtualCam.Follow = Player;
         SceneManager.LoadScene(_currentLevel);
     }
 }

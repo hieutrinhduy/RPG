@@ -161,19 +161,19 @@ namespace DigitalRuby.PyroParticles
                 currentPrefabScript = currentPrefabObject.GetComponent<FireBaseScript>();
                 if (currentPrefabScript.IsProjectile)
                 {
-                    // set the start point near the player
+                    // set the start point near the Player
                     rotation = transform.rotation;
                     pos = transform.position + forward + right + up;
                 }
                 else
                 {
-                    // set the start point in front of the player a ways
+                    // set the start point in front of the Player a ways
                     pos = transform.position + (forwardY * 10.0f);
                 }
             }
             else
             {
-                // set the start point in front of the player a ways, rotated the same way as the player
+                // set the start point in front of the Player a ways, rotated the same way as the Player
                 pos = transform.position + (forwardY * 5.0f);
                 rotation = transform.rotation;
                 pos.y = 0.0f;
