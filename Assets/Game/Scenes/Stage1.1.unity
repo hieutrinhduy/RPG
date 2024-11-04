@@ -25857,7 +25857,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: f7f4a74334ac3374bab345cb8ea15714, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: fa3f5673f091bb044a7ac3cd85f63678, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1041431861
 Transform:
@@ -34967,7 +34967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5600528122845344831, guid: e523fcd447aec6e4e84b8cd45fdc055f, type: 3}
       propertyPath: detectionRadius
-      value: 15
+      value: 13.7
       objectReference: {fileID: 0}
     - target: {fileID: 5600528122845344831, guid: e523fcd447aec6e4e84b8cd45fdc055f, type: 3}
       propertyPath: hasMultipleAttack
@@ -81067,6 +81067,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1079818097649210749, guid: a6f2c12fb03e364469fb717724c2de08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1164244260461904182, guid: a6f2c12fb03e364469fb717724c2de08, type: 3}
       propertyPath: looping
       value: 0
@@ -81267,6 +81271,10 @@ PrefabInstance:
       propertyPath: ExpProgress
       value: 
       objectReference: {fileID: 1707895662}
+    - target: {fileID: 2850998483766359198, guid: a6f2c12fb03e364469fb717724c2de08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3422532772038115955, guid: a6f2c12fb03e364469fb717724c2de08, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.49

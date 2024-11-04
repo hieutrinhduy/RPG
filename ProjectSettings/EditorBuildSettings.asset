@@ -16,9 +16,15 @@ EditorBuildSettings:
     guid: d55ce76773f0d9947a90ccebd5b929e8
   - enabled: 1
     path: Assets/Game/Scenes/Stage1.2.unity
-    guid: 37ab536519ee3974484bada3e3f10df4
+    guid: 59fc8b7f851a48747bfb20da4e8682a9
   - enabled: 1
     path: Assets/Game/Scenes/Stage1.3.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: ff557244335488749af4591827727cf5
+  - enabled: 1
+    path: Assets/Game/Scenes/Stage1.3.1.unity
+    guid: 64b11d00717886d4d9f992aea176c91e
+  - enabled: 1
+    path: Assets/Game/Scenes/CutSceneStage1.3.unity
+    guid: f1b61431da9b2f946b4b4ed8b5704335
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
