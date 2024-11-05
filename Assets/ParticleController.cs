@@ -9,7 +9,7 @@ public class ParticleController : MonoBehaviour
     void Start()
     {
         // Start the coroutine to automatically pause the particle system
-        StartCoroutine(PauseAfterTime(time));
+        //StartCoroutine(PauseAfterTime(time));
     }
 
     private IEnumerator PauseAfterTime(float time)
@@ -19,5 +19,9 @@ public class ParticleController : MonoBehaviour
 
         // Pause the Particle System
         particleSystem.Pause();
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(PauseAfterTime(time));
     }
 }
