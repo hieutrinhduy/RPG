@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
+    public bool IsRedMode;
     public GameObject Player;
     public Transform LockPlayerPos;
     public Transform[] ClonePos;
@@ -14,6 +16,10 @@ public class Boss : MonoBehaviour
     public GameObject HpBarPanel;
     public GameObject LockFx;
     public GameObject ShieldFx;
+    public GameObject MeteorPrefab;
+    public GameObject IceAttackPrefab;
+    public Transform[] IceAttackSpawnPos;
+    public GameObject IceSkillHitBox;
 
     private List<GameObject> cloneList = new List<GameObject>();
     public enum BossState
@@ -23,8 +29,15 @@ public class Boss : MonoBehaviour
         cloneSkill,
         meteoritoRain,
         defeated,
-        teleporting
+        teleporting,
+        iceAttack
     }
+
+    private void OnDestroy()
+    {
+
+    }
+
     private BossState state = BossState.idle;
     private Animator animator;
     private Health health;
@@ -43,27 +56,69 @@ public class Boss : MonoBehaviour
     {
         while (health.currentHealth > 0)
         {
-            yield return new WaitForSeconds(0.1f);
+            if (IsRedMode)
+            {
+                yield return new WaitForSeconds(0.1f);
 
-            // Fire Attack
-            SetBossState(BossState.fireAttack);
-            yield return StartCoroutine(ShootFireBallRoutine());
+                SetBossState(BossState.iceAttack);
+                yield return StartCoroutine(IceAttackRoutine());
 
-            SetBossState(BossState.idle);
-            yield return new WaitForSeconds(3f);
+                SetBossState(BossState.meteoritoRain);
+                yield return StartCoroutine(MeteorRoutine());
 
-            // Clone Skill
-            SetBossState(BossState.cloneSkill);
-            yield return StartCoroutine(CloneSkill());
+                // Fire Attack
+                SetBossState(BossState.fireAttack);
+                yield return StartCoroutine(ShootFireBallRoutine());
 
-            SetBossState(BossState.idle);
-            yield return new WaitForSeconds(5f);
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(3f);
 
-            SetBossState(BossState.teleporting);
-            yield return StartCoroutine(TeleportRoutine());
+                // Clone Skill
+                SetBossState(BossState.cloneSkill);
+                yield return StartCoroutine(CloneSkill());
 
-            SetBossState(BossState.idle);
-            yield return new WaitForSeconds(5f);
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(5f);
+
+                SetBossState(BossState.iceAttack);
+                yield return StartCoroutine(IceAttackRoutine());
+
+                SetBossState(BossState.teleporting);
+                yield return StartCoroutine(TeleportRoutine());
+
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(5f);
+
+                SetBossState(BossState.meteoritoRain);
+                yield return StartCoroutine(MeteorRoutine());
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.1f);
+
+                // Fire Attack
+                SetBossState(BossState.fireAttack);
+                yield return StartCoroutine(ShootFireBallRoutine());
+
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(3f);
+
+                // Clone Skill
+                SetBossState(BossState.cloneSkill);
+                yield return StartCoroutine(CloneSkill());
+
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(5f);
+
+                SetBossState(BossState.teleporting);
+                yield return StartCoroutine(TeleportRoutine());
+
+                SetBossState(BossState.idle);
+                yield return new WaitForSeconds(5f);
+
+                SetBossState(BossState.meteoritoRain);
+                yield return StartCoroutine(MeteorRoutine());
+            }
         }
     }
 
@@ -77,6 +132,10 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        if (health.IsDead && !IsRedMode)
+        {
+            SceneManager.LoadScene("CutSceneStage1.3(BossTransform)");
+        }
         if (state != BossState.defeated && state != BossState.teleporting)
         {
             RotateTowardsPlayer();
@@ -95,14 +154,28 @@ public class Boss : MonoBehaviour
     private IEnumerator ShootFireBallRoutine()
     {
         if (state != BossState.fireAttack) yield break;
-        ActiveShield();
-        for (int i = 0; i < 10; i++)
+        if(IsRedMode)
         {
-            if (state != BossState.fireAttack) yield break;
-            ShootFireBall();
-            yield return new WaitForSeconds(0.5f);
+            ActiveShield();
+            for (int i = 0; i < 10; i++)
+            {
+                if (state != BossState.fireAttack) yield break;
+                ShootFireBall();
+                yield return new WaitForSeconds(0.5f);
+            }
+            DeactiveShield();
         }
-        DeactiveShield();
+        else
+        {
+            ActiveShield();
+            for (int i = 0; i < 10; i++)
+            {
+                if (state != BossState.fireAttack) yield break;
+                ShootFireBall();
+                yield return new WaitForSeconds(0.5f);
+            }
+            DeactiveShield();
+        }
     }
 
     private void ShootFireBall()
@@ -209,5 +282,32 @@ public class Boss : MonoBehaviour
         Vector3 direction = (Player.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = lookRotation;
+    }
+
+    private IEnumerator MeteorRoutine()
+    {
+        animator.Play("Attack02");
+        for(int i = 0; i< 10;i++)
+        {
+            Vector3 spawnPos = Player.transform.position;
+            Instantiate(MeteorPrefab, spawnPos, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+
+    private IEnumerator IceAttackRoutine()
+    {
+        for(int i = 0; i < 3; i++)
+        {
+            ActiveShield();
+            int n= Random.Range(0, IceAttackSpawnPos.Length);
+            GameObject iceAttackRange = Instantiate(IceSkillHitBox, IceAttackSpawnPos[n].transform.position, Quaternion.Euler(-90,0,0));
+            yield return new WaitForSeconds(1f);
+            Destroy( iceAttackRange );
+            GameObject iceAttack = Instantiate(IceAttackPrefab, IceAttackSpawnPos[n].transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.6f);
+            Destroy(iceAttack);
+            DeactiveShield();
+        }
     }
 }

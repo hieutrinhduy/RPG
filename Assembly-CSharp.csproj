@@ -115,6 +115,7 @@
     <Compile Include="Assets\ClassicFantasyRPG_UI\Scripts\Controllers\UI\OneKeyAction.cs" />
     <Compile Include="Assets\PlayerProjectile.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Meteor.cs" />
     <Compile Include="Assets\Fade.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\Hovl_Laser.cs" />
     <Compile Include="Assets\Hovl Studio\HSFiles\Scripts\For demo scenes\HS_RaycastInstance.cs" />

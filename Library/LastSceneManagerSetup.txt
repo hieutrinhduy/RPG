@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Game/Scenes/CutSceneStage1.3(BossTransform).unity
+- path: Assets/Game/Scenes/Stage1.3.2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

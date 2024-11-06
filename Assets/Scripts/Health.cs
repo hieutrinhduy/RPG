@@ -31,8 +31,6 @@ public class Health : MonoBehaviour
 
     private Bomb bomb;
 
-
-
     private void Start()
     {
         ResetHealth();

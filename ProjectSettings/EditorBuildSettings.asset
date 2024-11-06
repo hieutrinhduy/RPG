@@ -26,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/CutSceneStage1.3.unity
     guid: f1b61431da9b2f946b4b4ed8b5704335
+  - enabled: 1
+    path: Assets/Game/Scenes/CutSceneStage1.3(BossTransform).unity
+    guid: 866452fd4ba93c348869fb909f842d7a
+  - enabled: 1
+    path: Assets/Game/Scenes/Stage1.3.2.unity
+    guid: 9dbe0d1a2448804448b2f3b18193535a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
