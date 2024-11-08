@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\RPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\endchapter1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\endchapter1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\levelchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\meteor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\meteor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|d:\\rpg\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\levelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\meteor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\meteor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\cutscenetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\scripts\\levelchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BE8E511-D506-A1D0-E67D-923A5ED26D39}|Assembly-CSharp.csproj|D:\\RPG\\assets\\teleportpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,25 +82,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Boss.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Boss.cs",
               "RelativeDocumentMoniker": "Assets\\Boss.cs",
               "ToolTip": "D:\\RPG\\Assets\\Boss.cs",
               "RelativeToolTip": "Assets\\Boss.cs",
-              "ViewState": "AQIAAHEAAAAAAAAAAAAIwI4AAAAFAAAA",
+              "ViewState": "AQIAABIBAAAAAAAAAAAowCQBAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T14:11:42.074Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "BossClone.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\BossClone.cs",
               "RelativeDocumentMoniker": "Assets\\BossClone.cs",
@@ -109,7 +112,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "EndChapter1.cs",
+              "DocumentMoniker": "D:\\RPG\\Assets\\EndChapter1.cs",
+              "RelativeDocumentMoniker": "Assets\\EndChapter1.cs",
+              "ToolTip": "D:\\RPG\\Assets\\EndChapter1.cs",
+              "RelativeToolTip": "Assets\\EndChapter1.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T14:52:19.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Meteor.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Meteor.cs",
               "RelativeDocumentMoniker": "Assets\\Meteor.cs",
@@ -117,12 +133,11 @@
               "RelativeToolTip": "Assets\\Meteor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T14:43:01.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T14:43:01.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ParticleController.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\ParticleController.cs",
               "RelativeDocumentMoniker": "Assets\\ParticleController.cs",
@@ -134,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CutSceneTrigger.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\CutSceneTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\CutSceneTrigger.cs",
@@ -146,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TeleportPoint.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\TeleportPoint.cs",
               "RelativeDocumentMoniker": "Assets\\TeleportPoint.cs",
@@ -158,19 +173,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "levelChange.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\levelChange.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\levelChange.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\levelChange.cs",
               "RelativeToolTip": "Assets\\Scripts\\levelChange.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T03:58:31.039Z"
+              "WhenOpened": "2024-11-02T03:58:31.039Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MagicAttacks_Projectile.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Skill\\Stylized VFX\\Skills\\_Scripts_\\MagicAttacks_Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\Skill\\Stylized VFX\\Skills\\_Scripts_\\MagicAttacks_Projectile.cs",
@@ -182,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Projectile.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\EffectCore\\packs\\WebDemoAssets\\scripts\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\EffectCore\\packs\\WebDemoAssets\\scripts\\Projectile.cs",
@@ -194,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Bullet.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Bullet.cs",
               "RelativeDocumentMoniker": "Assets\\Bullet.cs",
@@ -206,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
@@ -218,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
@@ -230,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PLayerControlls.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\PLayerControlls.cs",
               "RelativeDocumentMoniker": "Assets\\PLayerControlls.cs",
@@ -242,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "LevelController.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\LevelController.cs",
               "RelativeDocumentMoniker": "Assets\\LevelController.cs",
@@ -250,20 +266,20 @@
               "RelativeToolTip": "Assets\\LevelController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T03:52:08.746Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T03:52:08.746Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Sword.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Scripts\\Sword.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sword.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\Sword.cs",
               "RelativeToolTip": "Assets\\Scripts\\Sword.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAQwDAAAAApAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAQwC8AAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T03:52:06.163Z"
+              "WhenOpened": "2024-10-27T03:52:06.163Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -273,13 +289,13 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
               "ToolTip": "D:\\RPG\\Assets\\Scripts\\Health.cs",
               "RelativeToolTip": "Assets\\Scripts\\Health.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACgAAAAFAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAArwFAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T03:43:01.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Bomb.cs",
               "DocumentMoniker": "D:\\RPG\\Assets\\Bomb.cs",
               "RelativeDocumentMoniker": "Assets\\Bomb.cs",

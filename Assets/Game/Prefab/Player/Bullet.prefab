@@ -19660,6 +19660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55623879f1f743949b0ba8797b76260b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 0.15
   particleSystem: {fileID: 2704136004779294696}
 --- !u!114 &2628352301357278867
 MonoBehaviour:
@@ -19779,7 +19780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentObject: {fileID: 5051793236145530793}
-  damageAmount: 2
+  damageAmount: 50
   knockbackThurst: 1
   dontHaveTurnOffCollider: 1
   canStun: 0

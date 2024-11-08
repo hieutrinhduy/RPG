@@ -7,6 +7,7 @@ using System.Diagnostics.Tracing;
 
 public class Health : MonoBehaviour
 {
+    public bool IsBoss;
 
     public static Action<Health> OnDeath;
     public bool IsDead {  get; private set; }
@@ -75,7 +76,7 @@ public class Health : MonoBehaviour
             }
             if (HpBar != null)
             {
-                HpBar.transform.parent.gameObject.SetActive(false);
+                //HpBar.transform.parent.gameObject.SetActive(false);
                 HpBar.gameObject.SetActive(false);
             }
             if(aIEnemy != null)
@@ -87,10 +88,18 @@ public class Health : MonoBehaviour
                 HpBar.SetActive(false);
             }
             OnDeath?.Invoke(this);
-            Destroy(gameObject, 1f);
+            if(IsBoss) Destroy(gameObject, 2f);
+            else Destroy(gameObject, 1f);
             if(dropedExpPrefab != null)
             {
-                Instantiate(dropedExpPrefab, transform.position, Quaternion.identity);
+                if (IsBoss)
+                {
+                    Instantiate(dropedExpPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(dropedExpPrefab, transform.position, Quaternion.identity);
+                }
             }
         }
         else

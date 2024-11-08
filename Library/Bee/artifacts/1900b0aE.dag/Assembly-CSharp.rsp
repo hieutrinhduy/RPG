@@ -421,6 +421,7 @@
 "Assets/CutSceneTrigger.cs"
 "Assets/EffectCore/scripts/destroyMe.cs"
 "Assets/EffectCore/scripts/particleColorChangerMaster.cs"
+"Assets/EndChapter1.cs"
 "Assets/Fade.cs"
 "Assets/GameManager.cs"
 "Assets/Hovl Studio/AAA Magic circles Vol 3/Demo scene/CameraHolder.cs"
